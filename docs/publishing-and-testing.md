@@ -4,7 +4,7 @@
 
 Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024, 36 PNG obrázků a původní PDF mají jednu kanonickou sadu v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a nejsou zapracovány změny z let 2025 a 2026.
 
-Autor projektu potvrdil 20. 9. 2026 nahrání skill ZIPu v ChatGPT přes Settings → Plugins → Browse plugins → Skills → + → Upload from your computer a následnou dostupnost v Android aplikaci. [Návod se screenshoty](../README.md#instalace-skillu) tento postup zachycuje. Nahrání do Claude a dostupnost na jeho Android aplikaci zatím čekají na potvrzení.
+Autor projektu potvrdil 20. 9. 2026 nahrání skill ZIPu v ChatGPT přes Settings → Plugins → Browse plugins → Skills → + → Upload from your computer a následnou dostupnost v Android aplikaci. [Návod se screenshoty](../README.md#instalace-skillu) tento postup zachycuje. Postup pro Claude nyní vychází ze screenshotu Settings → Skills → Add → Upload skill. Dostupnost na jeho Android aplikaci zatím čeká na potvrzení.
 
 Potvrzená instalace neznamená ověření všech odpovědí. Níže uvedené scénáře zůstávají neprovedené, dokud nejsou zaznamenány jejich skutečné výsledky. Nová pravidla pro přílohy a citace je potřeba ověřit po nahrání nově sestavené verze; dřívější ruční import se s GitHubem sám neaktualizuje.
 
@@ -27,6 +27,8 @@ Začni nový chat s nahraným skillem. Zaznamenej datum, aplikaci a verzi, model
 - Odkaz označený jako PDF nesmí směřovat na `rules.md`. Odkaz na textový přepis musí být takto pojmenován.
 - Pokud aplikace neumí zpřístupnit soubor, odpověď nesmí vymyslet přílohu nebo interní adresu. Může uvést jasně označený externí odkaz na správný typ souboru.
 - U textové otázky neotevírat obrázky pro vizuální analýzu jen kvůli jejich přítomnosti v balíčku. Kopírování souboru jako přílohy nevyžaduje jeho vizuální analýzu.
+- U každého pravidla použitého pro odpověď musí skill přečíst celou část „VÝKLAD K PRAVIDLU“, včetně všech podčástí pravidla 12. Nestačí první odpovídající bod výkladu. Pokud již není celý výklad v aktuálním kontextu, musí jej načíst znovu; nemožnost načtení přiznat.
+- Před závěrem musí skill zkontrolovat relevantní souvislosti a výjimky i mimo první nalezenou pasáž. V odpovědi citovat ustanovení, která závěr mění; nejde jen o přidání obecné věty, že výjimky mohou existovat.
 - Při dotazu na současná pravidla musí odpověď přiznat stáří přiloženého vydání.
 
 ## Scénáře odpovědí
@@ -45,3 +47,10 @@ Očekávání nejsou výsledky již provedeného testu modelu.
 | Negativní | Kolik faulů dovolují pravidla futsalu? | Neprezentovat tento balíček jako futsalová pravidla. |
 | Hranice | Jaké je aktuální pravidlo pro držení míče brankářem v roce 2026? | Přiznat stáří balíčku; současné znění ověřit zvlášť v aktuálním oficiálním zdroji, nebo říci, že ho nelze z balíčku určit. |
 | Hranice | Hráč hrál rukou. Je za to červená? | Vyžádat rozhodující okolnosti nebo rozlišit varianty; žádný automatický kategorický závěr. |
+
+### Kontrola výjimek
+
+Tyto scénáře jsou připravené pro ruční ověření, nikoli již provedené testy:
+
+- „Útočník v ofsajdové pozici obdržel míč přímo z vhazování. Má se pískat ofsajd?“ Odpověď musí zohlednit oddíl 3 „Není ofsajd“, nikoli skončit u obecné definice pozice nebo aktivního zapojení.
+- „Útočník v ofsajdové pozici získal míč po doteku obránce. Je to ofsajd?“ Odpověď nesmí rozhodnout podle samotného slova „dotek“. Musí rozlišit vědomé hraní, odraz a obranný zákrok, případně se doptat, a citovat související ustanovení pravidla 11.
