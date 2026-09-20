@@ -2,9 +2,9 @@
 
 Pravidla fotbalu FAČR z roku 2024 převedená do jednoho Markdown souboru. Vydání je platné od **1. 7. 2024**; změny z let 2025 a 2026 nejsou zapracovány.
 
-- [Pravidla v Markdownu](plugins/football-rules-cz/skills/football-rules-cz/references/rules.md)
-- [Původní PDF](plugins/football-rules-cz/skills/football-rules-cz/references/sources/pravidla-fotbalu-facr-2024.pdf)
-- [Samostatné obrázky](plugins/football-rules-cz/skills/football-rules-cz/references/assets/)
+- [Pravidla v Markdownu](skills/football-rules-cz/references/rules.md)
+- [Původní PDF](skills/football-rules-cz/references/sources/pravidla-fotbalu-facr-2024.pdf)
+- [Samostatné obrázky](skills/football-rules-cz/references/assets/)
 
 ## Obsah
 
@@ -28,69 +28,55 @@ Převod byl proveden pomocí pdfplumber 0.11.9 z textové vrstvy PDF. Byla odstr
 
 Jde o pracovní převod, nikoli nové oficiální vydání. Pro kontrolu znění slouží přiložené PDF. Autorská práva k převzatému textu a ilustracím zůstávají původním nositelům práv; tento repozitář jim nepřiděluje novou licenci.
 
-## Plugin pro ChatGPT, Codex a Claude
+## Instalace skillu
 
-[Plugin](plugins/football-rules-cz/) obsahuje skill s úplnými pravidly, PDF a samostatnými diagramy. Nepotřebuje MCP server ani vlastní backend. Model má před první odpovědí přečíst celý text; pokud tomu zabrání limit kontextu, musí přiznat omezený rozsah kontroly a ověřit související ustanovení. Instrukce nezaručují neomezený kontext ani bezchybné odpovědi.
+Pro ChatGPT i Claude se používá stejný ZIP se skillem, pravidly a obrázky. Není potřeba plugin, marketplace, konektor ani MCP server.
 
-### Codex: instalace z tohoto repozitáře
+Stáhni **skill ZIP** z [nejnovějšího vydání](https://github.com/KaliCZ/football-rules-cz/releases/latest): soubor pojmenovaný `football-rules-cz-skill-` s číslem verze a příponou `.zip`. Nevybírej automatické archivy **Source code** a ZIP před nahráním nerozbaluj.
 
-V aktuálním Codex CLI s příkazem `plugin add`:
+### ChatGPT — ověřeno i na Androidu
 
-```sh
-codex plugin marketplace add KaliCZ/football-rules-cz
-codex plugin add football-rules-cz@personal
-```
+Na počítači se přihlas ke stejnému účtu, který používáš v telefonu:
 
-Marketplace v tomto repozitáři se jmenuje `personal`. Pokud už máš jiný marketplace se stejným názvem, nepřepisuj ho; použij vlastní lokální marketplace s jiným názvem a odkazem na složku pluginu. Instalace z hlavní větve bude dostupná po sloučení změny s pluginem.
+1. Otevři **Settings → Plugins → Browse plugins**.
+2. Přepni na záložku **Skills**.
+3. Klikni na **+ → Upload from your computer** a vyber stažený skill ZIP.
+4. Ověř, že je **Pravidla fotbalu 2024 (CZ)** mezi nainstalovanými skilly, a začni nový chat s tímto skillem.
+5. V Android aplikaci používej stejný účet. Dostupnost skillu po tomto nahrání byla potvrzena autorem projektu dne 20. 9. 2026; nejde o test všech účtů a verzí aplikace.
 
-Spusť novou relaci a požádej například:
+![Settings → Plugins → Browse plugins](docs/images/chatgpt-settings-plugins.png)
 
-> Použij $football-rules-cz. Může být hráč v ofsajdu přímo z vhazování? Odpověz podle FAČR 2024 a uveď stránku.
+![Skills → + → Upload from your computer](docs/images/chatgpt-upload-skill.png)
 
-### Claude Code: instalace z veřejného repozitáře
+Pro první otázku zkus:
 
-Po sloučení této změny spusť v Claude Code:
+> Použij skill Pravidla fotbalu 2024 (CZ). Může být hráč v ofsajdu přímo z vhazování? Uveď pravidlo a stránku.
 
-```text
-/plugin marketplace add KaliCZ/football-rules-cz
-/plugin install football-rules-cz@football-rules-cz
-```
+Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024. V tomto projektu je ověřena instalace a dostupnost na Androidu; úplné načtení pravidel a správnost všech odpovědí nejsou tímto potvrzeny.
 
-Potom otevři novou relaci a použij:
+### Claude — ruční nahrání, ověření zatím probíhá
 
-```text
-/football-rules-cz:football-rules-cz Může být hráč v ofsajdu přímo z vhazování? Uveď pravidlo a stránku.
-```
+V rozhraní Claude otevři **Customize → Skills → + → Create skill → Upload a skill**, nahraj stejný skill ZIP a skill zapni. Pokud je to potřeba, zapni **Settings → Capabilities → Code execution and file creation**. Potom začni nový chat a výslovně požádej o použití skillu.
 
-Claude používá stejný skill, pravidla a obrázky jako ChatGPT/Codex. Jeho manifest je v `plugins/football-rules-cz/.claude-plugin/plugin.json`, veřejný marketplace v `.claude-plugin/marketplace.json`. Není potřeba přístup do autorova účtu nebo workspace.
+Toto je postup podle [návodu Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude). Nahrání tohoto balíčku a jeho dostupnost v Claude na Androidu zatím nebyly autorem potvrzeny. Nabídka **Connectors** slouží připojení služeb, nikoli nahrání tohoto skillu.
 
-### Claude: instalace přes aplikaci
+### Aktualizace a soubory v odpovědi
 
-V aplikacích, kde je tato nabídka dostupná, otevři **Customize → Plugins → Personal plugins → + → Add marketplace → Add from a repository** a vlož `https://github.com/KaliCZ/football-rules-cz`. Alternativně lze nahrát ZIP pluginu vytvořený příkazem `python scripts/build_plugin.py`, pokud aplikace nabízí import vlastního pluginu. Nestahuj ZIP celého repozitáře; distribuční ZIP má manifest a skills přímo v kořeni.
+Novou verzi stáhni z GitHub Releases a nahraj ji přes správu skillů. Ruční import ZIPu není automatická synchronizace s repozitářem; po změně začni nový chat.
 
-Dostupnost těchto možností závisí na aplikaci a účtu. Instalace v Claude Code ani lokální instalace v Claude Desktop sama o sobě nedokazuje dostupnost na telefonu; mobilní použití tohoto balíčku zatím není otestováno. Repozitář není automaticky zařazen do vestavěného katalogu Anthropic.
+Skill má přednostně zpřístupnit původní PDF nebo potřebný diagram přímo jako přílohu v chatu, pokud to daná aplikace umožňuje. Samotné uložení souboru ve skillu nezaručuje, že na něj uživatel může kliknout. Pokud příloha není možná, může odpověď obsahovat označený externí odkaz.
 
-Zdroje: [Claude Code marketplaces](https://code.claude.com/docs/en/plugin-marketplaces), [pluginy v aplikaci Claude](https://support.claude.com/en/articles/13837440-use-plugins-in-claude), ověřeno 20. 9. 2026.
+Citace „PDF, strana 162“ musí odkazovat na PDF a označuje pořadí stránky v PDF. Odkaz na Markdown má být označen jako textový přepis. Prohlížeč v aplikaci nemusí podporovat automatické otevření konkrétní stránky.
 
-### ChatGPT na Androidu a iOS
+## Údržba a vydání
 
-Mobilní aplikace umí používat pluginy dostupné účtu, ale odkaz na tento GitHub repozitář sám o sobě plugin nenainstaluje. Instalace v lokálním Codex CLI také nedokládá dostupnost v mobilním účtu. Pokud mobil zobrazuje pouze katalog, je třeba plugin nejprve zpřístupnit přes podporované sdílení účtu či workspace, nebo jej zveřejnit ve společném katalogu ChatGPT a Codex.
+Jediná sada pravidel, PDF a diagramů je v `skills/football-rules-cz/references/`. Instrukce jsou v `skills/football-rules-cz/SKILL.md`. Distribuční ZIP obsahuje tuto složku skillu včetně referencí, nikoli soubory dokumentace repozitáře.
 
-**Tento plugin zatím nebyl odeslán ke schválení ani zveřejněn v katalogu. Mobilní instalace a odpovědi zatím nejsou ověřené.** Volitelný ZIP vytvořený příkazem `python scripts/build_plugin.py` slouží pro předání balíčku a publikaci, nikoli jako slíbený import v Android aplikaci.
-
-Postup zveřejnění a konkrétní zkušební otázky jsou v [návodu pro publikaci a testování](docs/publishing-and-testing.md). Po zpřístupnění plugin nainstaluj v sekci Plugins, otevři nový chat a vyber jej přes `@` nebo jej výslovně požádej o použití.
-
-Ověřeno proti dokumentaci dne 20. 9. 2026: [podporované aplikace](https://learn.chatgpt.com/docs/plugins), [formát balíčku](https://developers.openai.com/plugins/build/plugins), [publikace](https://developers.openai.com/plugins/deploy/submission). Nabídka instalace se může lišit podle účtu a aplikace.
-
-### Údržba balíčku
-
-Jediná sada zdrojů je v `plugins/football-rules-cz/skills/football-rules-cz/references/`: `rules.md`, `assets/` a `sources/`. Upravuj přímo tyto soubory. Jsou součástí instalovaného skillu, takže není potřeba kopie v kořeni repozitáře.
-
-Z kořene repozitáře s Pythonem 3.10 nebo novějším:
+S Pythonem 3.10 nebo novějším spusť z kořene repozitáře:
 
 ```sh
-python scripts/build_plugin.py
-python scripts/build_plugin.py --check
+python scripts/build_skill.py --check
+python scripts/build_skill.py
 ```
 
-Skript používá pouze standardní knihovnu. Přepínač `--check` ověří zdrojové soubory, odkazy a soulad manifestů bez vytváření ZIPu. Bez přepínače sestaví reprodukovatelný ZIP do `dist/football-rules-cz.zip`. Složka `dist/` je ignorovaná Gitem; ZIP se necommituje a pro instalaci z GitHub marketplace není potřeba. Pro distribuci jej lze přiložit k vydání na GitHub Releases. Při vydání změň verzi ve všech třech manifestech; cache instalovaných pluginů je vázána na verzi. Před vydáním znovu proveď testy odpovědí uvedené v návodu.
+První příkaz kontroluje odkazy a strukturu, druhý navíc sestaví reprodukovatelný ZIP a kontrolní součet do `dist/`. Číslo vydání je v `VERSION`. Generované soubory jsou ignorované Gitem a přikládají se k vydání na GitHub Releases; necommitují se. Před vydáním proveď [kontroly a scénáře](docs/publishing-and-testing.md).
