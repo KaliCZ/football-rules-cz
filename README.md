@@ -10,15 +10,15 @@ Pro ChatGPT i Claude se používá stejný ZIP se skillem, pravidly a obrázky. 
 
 Stáhni **skill ZIP** z [nejnovějšího vydání](https://github.com/KaliCZ/football-rules-cz/releases/latest): soubor pojmenovaný `football-rules-cz-skill-` s číslem verze a příponou `.zip`. Nevybírej automatické archivy **Source code** a ZIP před nahráním nerozbaluj.
 
-### ChatGPT — ověřeno i na Androidu
+### ChatGPT — web, desktopová aplikace a Android
 
-Na počítači se přihlas ke stejnému účtu, který používáš v telefonu:
+**Instalaci proveď přes web.** Po nahrání skill funguje také v desktopové aplikaci ChatGPT a na Androidu, pokud používáš stejný účet; autor projektu obě aplikace ověřil.
 
-1. Otevři **Settings → Plugins → Browse plugins**.
+1. V prohlížeči otevři [ChatGPT — Plugins](https://chatgpt.com/plugins) a přihlas se. Na tuto stránku se dostaneš také přes **Settings → Plugins → Browse plugins**.
 2. Přepni na záložku **Skills**.
 3. Klikni na **+ → Upload from your computer** a vyber stažený skill ZIP.
 4. Ověř, že je **Pravidla fotbalu 2024 (CZ)** mezi nainstalovanými skilly, a začni nový chat s tímto skillem.
-5. V Android aplikaci používej stejný účet. Dostupnost skillu po tomto nahrání byla potvrzena autorem projektu dne 20. 9. 2026; nejde o test všech účtů a verzí aplikace.
+5. V desktopové nebo Android aplikaci se přihlas ke stejnému účtu a začni nový chat se skillem. Další instalace v aplikaci není potřeba.
 
 ![Settings → Plugins → Browse plugins](docs/images/chatgpt-settings-plugins.png)
 
@@ -28,17 +28,20 @@ Pro první otázku zkus:
 
 > Použij skill Pravidla fotbalu 2024 (CZ). Může být hráč v ofsajdu přímo z vhazování? Uveď pravidlo a stránku.
 
-Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024. V tomto projektu je ověřena instalace a dostupnost na Androidu; úplné načtení pravidel a správnost všech odpovědí nejsou tímto potvrzeny.
+Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024. Autor projektu dne 20. 9. 2026 potvrdil funkčnost po webové instalaci v desktopové aplikaci i na Androidu; úplné načtení pravidel a správnost všech odpovědí nejsou tímto potvrzeny.
 
-### Claude — webová verze
+### Claude — web a desktopová aplikace
 
-1. Otevři **Settings → Skills** (v části **Customize**).
+**Instalaci proveď přes web.** Po nahrání skill funguje také v desktopové aplikaci Claude pod stejným účtem; autor projektu tuto funkčnost ověřil.
+
+1. V prohlížeči otevři [Claude — Skills](https://claude.ai/customize/skills) a přihlas se. Na tuto stránku se dostaneš také přes **Settings → Skills** (v části **Customize**).
 2. Klikni na **Add → Upload skill** a vyber stejný stažený skill ZIP.
 3. Skill zapni a začni nový chat, ve kterém jej požádáš o odpověď podle pravidel FAČR 2024.
+4. V desktopové aplikaci se přihlas ke stejnému účtu a začni nový chat se skillem. Další instalace v aplikaci není potřeba.
 
 ![Settings → Skills → Add → Upload skill](docs/images/claude-upload-skill.png)
 
-Postup odpovídá přiloženému screenshotu. Autor ověřil instalaci do webové verze Claude.
+Postup odpovídá přiloženému screenshotu. Autor dne 20. 9. 2026 ověřil instalaci ve webové verzi Claude a použití v desktopové aplikaci.
 
 ### Claude — mobilní aplikace: nefunguje
 
