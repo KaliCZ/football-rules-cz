@@ -1,0 +1,21 @@
+{
+  "name": "football-rules-cz",
+  "version": "0.1.0",
+  "description": "Odpovědi v češtině podle pravidel fotbalu FAČR 2024, s odkazy na pravidla a diagramy.",
+  "author": {
+    "name": "KaliCZ",
+    "url": "https://github.com/KaliCZ"
+  },
+  "homepage": "https://github.com/KaliCZ/football-rules-cz",
+  "repository": "https://github.com/KaliCZ/football-rules-cz",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Pravidla fotbalu 2024 (CZ)",
+    "shortDescription": "Česká pravidla fotbalu 2024 s citacemi.",
+    "longDescription": "Neoficiální pomocník pro výklad pravidel FAČR z roku 2024. Obsahuje kompletní převod pravidel, původní PDF a diagramy. Neobsahuje změny z let 2025 a 2026.",
+    "developerName": "KaliCZ",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Podle pravidel FAČR 2024 vysvětli, zda může být hráč v ofsajdu přímo z vhazování. Uveď pravidlo a stránku."
+  }
+}

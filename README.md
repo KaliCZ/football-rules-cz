@@ -27,3 +27,45 @@ Pro práci s textem stačí `rules.md`. Při otázkách závislých na konkrétn
 Převod byl proveden pomocí pdfplumber 0.11.9 z textové vrstvy PDF. Byla odstraněna opakovaná záhlaví a zápatí, spojena slova rozdělená na konci řádků, obnoveny mezery a struktura nadpisů a opraveno chybné kódování tiráže. Obrázky zachovávají původní grafický obsah; nejde o nově vytvořené ilustrace.
 
 Jde o pracovní převod, nikoli nové oficiální vydání. Pro kontrolu znění slouží přiložené PDF. Autorská práva k převzatému textu a ilustracím zůstávají původním nositelům práv; tento repozitář jim nepřiděluje novou licenci.
+
+## Plugin pro ChatGPT a Codex
+
+[Plugin](plugins/football-rules-cz/) obsahuje skill s úplnými pravidly, PDF a samostatnými diagramy. Nepotřebuje MCP server ani vlastní backend. Model má před první odpovědí přečíst celý text; pokud tomu zabrání limit kontextu, musí přiznat omezený rozsah kontroly a ověřit související ustanovení. Instrukce nezaručují neomezený kontext ani bezchybné odpovědi.
+
+### Codex: instalace z tohoto repozitáře
+
+V aktuálním Codex CLI s příkazem `plugin add`:
+
+```sh
+codex plugin marketplace add KaliCZ/football-rules-cz
+codex plugin add football-rules-cz@personal
+```
+
+Marketplace v tomto repozitáři se jmenuje `personal`. Pokud už máš jiný marketplace se stejným názvem, nepřepisuj ho; použij vlastní lokální marketplace s jiným názvem a odkazem na složku pluginu. Instalace z hlavní větve bude dostupná po sloučení změny s pluginem.
+
+Spusť novou relaci a požádej například:
+
+> Použij $football-rules-cz. Může být hráč v ofsajdu přímo z vhazování? Odpověz podle FAČR 2024 a uveď stránku.
+
+### ChatGPT na Androidu a iOS
+
+Mobilní aplikace umí používat pluginy dostupné účtu, ale odkaz na tento GitHub repozitář sám o sobě plugin nenainstaluje. Instalace v lokálním Codex CLI také nedokládá dostupnost v mobilním účtu. Pokud mobil zobrazuje pouze katalog, je třeba plugin nejprve zpřístupnit přes podporované sdílení účtu či workspace, nebo jej zveřejnit ve společném katalogu ChatGPT a Codex.
+
+**Tento plugin zatím nebyl odeslán ke schválení ani zveřejněn v katalogu. Mobilní instalace a odpovědi zatím nejsou ověřené.** [Hotový ZIP](dist/football-rules-cz.zip) slouží pro předání balíčku a publikaci, nikoli jako slíbený import v Android aplikaci.
+
+Postup zveřejnění a konkrétní zkušební otázky jsou v [návodu pro publikaci a testování](docs/publishing-and-testing.md). Po zpřístupnění plugin nainstaluj v sekci Plugins, otevři nový chat a vyber jej přes `@` nebo jej výslovně požádej o použití.
+
+Ověřeno proti dokumentaci dne 20. 9. 2026: [podporované aplikace](https://learn.chatgpt.com/docs/plugins), [formát balíčku](https://developers.openai.com/plugins/build/plugins), [publikace](https://developers.openai.com/plugins/deploy/submission). Nabídka instalace se může lišit podle účtu a aplikace.
+
+### Údržba balíčku
+
+Zdroj pravdy zůstává v kořeni: `rules.md`, `assets/` a `sources/`. Kopie v `plugins/football-rules-cz/skills/football-rules-cz/references/` zajišťují, že plugin funguje i bez pracovního adresáře repozitáře. Neupravuj je samostatně.
+
+Z kořene repozitáře s Pythonem 3.10 nebo novějším:
+
+```sh
+python scripts/build_plugin.py
+python scripts/build_plugin.py --check
+```
+
+Skript používá pouze standardní knihovnu. Synchronizuje 38 zdrojových souborů, ověří odkazy a soulad manifestů a sestaví reprodukovatelný ZIP. Commituj i aktualizované kopie a ZIP. Při vydání změň verzi v obou manifestech; cache instalovaných pluginů je vázána na verzi. Před vydáním znovu proveď testy odpovědí uvedené v návodu.
