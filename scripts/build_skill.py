@@ -4,13 +4,29 @@ import io
 import hashlib
 from pathlib import Path
 import re
+import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/football-rules-cz"
 REFERENCES = SKILL / "references"
-VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-ARCHIVE = ROOT / "dist" / f"football-rules-cz-skill-{VERSION}.zip"
+
+
+def git_output(*arguments):
+    return subprocess.check_output(
+        ["git", *arguments], cwd=ROOT, text=True, encoding="utf-8").strip()
+
+
+def build_version():
+    tags = [tag for tag in git_output("tag", "--points-at", "HEAD").splitlines()
+            if re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+", tag)]
+    dirty = bool(git_output("status", "--porcelain", "--untracked-files=normal"))
+    if len(tags) > 1:
+        raise ValueError("Multiple release tags point to HEAD; the version is ambiguous")
+    if tags and not dirty:
+        return tags[0][1:]
+    commit = git_output("rev-parse", "--short=12", "HEAD")
+    return f"dev-{commit}" + ("-dirty" if dirty else "")
 
 
 def resource_files():
@@ -55,8 +71,6 @@ def main():
     for path in resources:
         if not path.is_file():
             raise ValueError(f"Missing resource: {path}")
-    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", VERSION):
-        raise ValueError("VERSION must contain a semantic version")
     skill_text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
     if not skill_text.startswith("---\nname: football-rules-cz\n"):
         raise ValueError("Skill folder and frontmatter name must agree")
@@ -66,13 +80,14 @@ def main():
     verify_links()
     print(f"Verified {len(resources)} canonical resources, links, and skill structure.")
     if not args.check:
+        archive = ROOT / "dist" / f"football-rules-cz-skill-{build_version()}.zip"
         content = archive_bytes()
-        ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
-        ARCHIVE.write_bytes(content)
+        archive.parent.mkdir(parents=True, exist_ok=True)
+        archive.write_bytes(content)
         checksum = hashlib.sha256(content).hexdigest()
-        (ARCHIVE.parent / "SHA256SUMS.txt").write_text(
-            f"{checksum}  {ARCHIVE.name}\n", encoding="utf-8", newline="\n")
-        print(f"Built {ARCHIVE.relative_to(ROOT)} ({len(content):,} bytes).")
+        (archive.parent / "SHA256SUMS.txt").write_text(
+            f"{checksum}  {archive.name}\n", encoding="utf-8", newline="\n")
+        print(f"Built {archive.relative_to(ROOT)} ({len(content):,} bytes).")
 
 
 

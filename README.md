@@ -86,4 +86,4 @@ python scripts/build_skill.py --check
 python scripts/build_skill.py
 ```
 
-První příkaz kontroluje odkazy a strukturu, druhý navíc sestaví reprodukovatelný ZIP a kontrolní součet do `dist/`. Číslo vydání je v `VERSION`. Generované soubory jsou ignorované Gitem a přikládají se k vydání na GitHub Releases; necommitují se. Před vydáním proveď [kontroly a scénáře](docs/publishing-and-testing.md).
+První příkaz kontroluje odkazy a strukturu, druhý navíc sestaví reprodukovatelný ZIP a kontrolní součet do `dist/`. Číslo vydání se odvozuje z Git tagu ve tvaru `v0.2.1` na aktuálním commitu. V čistém checkoutu tohoto tagu vznikne verzovaný ZIP; bez tagu nebo s necommitnutými změnami vznikne vývojový ZIP označený `dev-` a identifikátorem commitu (případně `-dirty`). Pro sestavení je potřeba Git checkout s dostupnými tagy; `--check` Git ani tag nevyžaduje. Generované soubory jsou ignorované Gitem a přikládají se k vydání na GitHub Releases; necommitují se. Před vydáním proveď [kontroly a scénáře](docs/publishing-and-testing.md).
