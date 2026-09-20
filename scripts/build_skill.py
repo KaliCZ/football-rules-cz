@@ -4,29 +4,11 @@ import io
 import hashlib
 from pathlib import Path
 import re
-import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/football-rules-cz"
 REFERENCES = SKILL / "references"
-
-
-def git_output(*arguments):
-    return subprocess.check_output(
-        ["git", *arguments], cwd=ROOT, text=True, encoding="utf-8").strip()
-
-
-def build_version():
-    tags = [tag for tag in git_output("tag", "--points-at", "HEAD").splitlines()
-            if re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+", tag)]
-    dirty = bool(git_output("status", "--porcelain", "--untracked-files=normal"))
-    if len(tags) > 1:
-        raise ValueError("Multiple release tags point to HEAD; the version is ambiguous")
-    if tags and not dirty:
-        return tags[0][1:]
-    commit = git_output("rev-parse", "--short=12", "HEAD")
-    return f"dev-{commit}" + ("-dirty" if dirty else "")
 
 
 def resource_files():
@@ -66,7 +48,12 @@ def archive_bytes():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Verify generated files without changing them")
+    parser.add_argument("--version", help="Required for builds, in MAJOR.MINOR.PATCH format (for example 0.2.1)")
     args = parser.parse_args()
+    if not args.check and args.version is None:
+        parser.error("--version is required when building an archive")
+    if args.version is not None and not re.fullmatch(r"(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)", args.version):
+        parser.error("--version must use MAJOR.MINOR.PATCH format, for example 0.2.1")
     resources = resource_files()
     for path in resources:
         if not path.is_file():
@@ -80,7 +67,7 @@ def main():
     verify_links()
     print(f"Verified {len(resources)} canonical resources, links, and skill structure.")
     if not args.check:
-        archive = ROOT / "dist" / f"football-rules-cz-skill-{build_version()}.zip"
+        archive = ROOT / "dist" / f"football-rules-cz-skill-{args.version}.zip"
         content = archive_bytes()
         archive.parent.mkdir(parents=True, exist_ok=True)
         archive.write_bytes(content)

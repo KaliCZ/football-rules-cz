@@ -10,9 +10,9 @@ Potvrzená instalace neznamená ověření všech odpovědí. Níže uvedené sc
 
 ## Vytvoření veřejného vydání
 
-1. Po sloučení změn označ vydávaný commit Git tagem ve tvaru `v0.2.1`. Tag je jediný zdroj čísla vydání.
-2. V čistém checkoutu tohoto commitu s dostupným tagem spusť `python scripts/build_skill.py --check` a `python scripts/build_skill.py`. Bez tagu nebo s necommitnutými změnami vznikne pouze vývojově označený ZIP; ten nepoužívej jako vydání.
-3. Vytvoř GitHub Release z téhož tagu. Přilož vygenerovaný `football-rules-cz-skill-` ZIP s číslem verze a `SHA256SUMS.txt` ze složky `dist/`.
+1. Po sloučení změn zvol číslo vydání, například `0.2.1`.
+2. Z vydávaného commitu spusť `python scripts/build_skill.py --check` a `python scripts/build_skill.py --version 0.2.1`. Sestavení vyžaduje explicitní verzi; skript ji neodvozuje z Gitu.
+3. Vytvoř GitHub Release pro tentýž commit s odpovídajícím tagem, v tomto příkladu `v0.2.1`. Přilož vygenerovaný ZIP a `SHA256SUMS.txt` ze složky `dist/`. Číslo tagu a parametr sestavení musí souhlasit.
 4. V poznámkách uveď vydání pravidel, změny skillu a skutečně provedené testy. Uživatelé stahují přílohu vydání, nikoli automatický archiv Source code.
 
 ZIP obsahuje `football-rules-cz/SKILL.md`, metadata skillu a reference. Neobsahuje marketplace, plugin manifesty, screenshoty instalačního návodu ani balicí skript. Generované soubory se necommitují. Distribuce probíhá veřejným stažením a ručním importem; nevyžaduje sdílení autorova účtu ani publikaci do katalogu pluginů.
