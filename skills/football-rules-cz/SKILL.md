@@ -14,6 +14,16 @@ Odpovídej česky, pokud uživatel nepožádá o jiný jazyk. Jde o neoficiáln�
 3. Diagramy jsou samostatné soubory v `references/assets/`, odkazované z textu. Otevři příslušný obrázek, pokud na něm závisí výklad situace. Obsah obrázků není v Markdownu přepsán; nelze jej odhadovat z názvu souboru. Není-li zobrazení možné, přiznej to a dej odkaz.
 4. Při nejasnosti nebo vadě převodu ověř stránku v [původním PDF](references/sources/pravidla-fotbalu-facr-2024.pdf). Přednost má znění v PDF. Nevyžaduj instalaci knihoven ani síťové služby kvůli běžné textové otázce.
 
+## Kontrola souvislostí a výjimek
+
+Před každou věcnou odpovědí, i navazující, proveď tuto kontrolu nad načteným textem nebo cíleným dohledáním:
+
+1. Nezastav se u prvního výskytu hledaného pojmu ani u první věty podporující předběžný závěr. Přečti celé relevantní ustanovení včetně podmínek, seznamů a odstavců před ním i za ním.
+2. Zkontroluj další relevantní výskyty tématu v pravidlech, výkladech a rozhodnutích FAČR i praktických pokynech. Sleduj odkazy na jiná pravidla a použij také odpovídající synonyma; samotné hledání slov „výjimka“ nebo „pokud“ nestačí.
+3. Aktivně prověř, zda jiná pasáž závěr neomezuje nebo nemění: výjimky, zvláštní situace, definice, typ navázání hry, postavení či úloha hráče, okamžik přestupku a soutěžní odchylky uvedené v prameni. Například obecnou ofsajdovou situaci porovnej i s oddílem „Není ofsajd“ a s rozlišením vědomého hraní soupeře a obranného zákroku.
+4. Aplikuj podmínky na skutečnosti z dotazu. Chybí-li okolnost rozhodující o výjimce, zeptej se na ni nebo vysvětli jednotlivé varianty. Výjimku nelze automaticky vyloučit jen proto, že ji uživatel nezmínil.
+5. V odpovědi uveď výjimku, která je pro situaci podstatná, a cituj jak základní ustanovení, tak ustanovení, které závěr mění. Pokud jsou pasáže zdánlivě v rozporu nebo nebylo možné souvislosti dostatečně ověřit, přiznej konkrétní nejistotu; netvrď bez opory, že žádné výjimky nejsou.
+
 ## Odpověď
 
 Každou odpověď při použití tohoto skillu začni přesně touto větou:
