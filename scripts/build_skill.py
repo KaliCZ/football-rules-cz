@@ -1,15 +1,16 @@
 """Validate the canonical skill resources and optionally build a reproducible archive."""
 import argparse
 import io
-import json
+import hashlib
 from pathlib import Path
 import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / "plugins/football-rules-cz"
-REFERENCES = PLUGIN / "skills/football-rules-cz/references"
-ARCHIVE = ROOT / "dist/football-rules-cz.zip"
+SKILL = ROOT / "skills/football-rules-cz"
+REFERENCES = SKILL / "references"
+VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+ARCHIVE = ROOT / "dist" / f"football-rules-cz-skill-{VERSION}.zip"
 
 
 def resource_files():
@@ -35,11 +36,11 @@ def verify_links():
 def archive_bytes():
     output = io.BytesIO()
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
-        for path in sorted(PLUGIN.rglob("*")):
+        for path in sorted(SKILL.rglob("*")):
             if path.is_symlink():
                 raise ValueError(f"Symlinks are not portable: {path}")
             if path.is_file():
-                entry = zipfile.ZipInfo(path.relative_to(PLUGIN).as_posix(), (2024, 7, 1, 0, 0, 0))
+                entry = zipfile.ZipInfo("football-rules-cz/" + path.relative_to(SKILL).as_posix(), (2024, 7, 1, 0, 0, 0))
                 entry.compress_type = zipfile.ZIP_DEFLATED
                 entry.external_attr = 0o100644 << 16
                 archive.writestr(entry, path.read_bytes(), compresslevel=9)
@@ -54,28 +55,23 @@ def main():
     for path in resources:
         if not path.is_file():
             raise ValueError(f"Missing resource: {path}")
-    portable = json.loads((PLUGIN / "plugin.json").read_text(encoding="utf-8"))
-    compatibility = json.loads((PLUGIN / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
-    claude = json.loads((PLUGIN / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
-    for key in ("name", "version", "description", "author", "homepage", "repository"):
-        if not portable[key] == compatibility[key] == claude[key]:
-            raise ValueError(f"Manifest mismatch: {key}")
-    if portable["extensions"]["com.openai"]["interface"] != compatibility["interface"]:
-        raise ValueError("Manifest interface mismatch")
-    marketplace = json.loads((ROOT / ".agents/plugins/marketplace.json").read_text(encoding="utf-8"))
-    entry = next(item for item in marketplace["plugins"] if item["name"] == portable["name"])
-    if (ROOT / entry["source"]["path"]).resolve() != PLUGIN:
-        raise ValueError("Marketplace points to the wrong plugin directory")
-    claude_marketplace = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
-    claude_entry = next(item for item in claude_marketplace["plugins"] if item["name"] == portable["name"])
-    if (ROOT / claude_entry["source"]).resolve() != PLUGIN:
-        raise ValueError("Claude marketplace points to the wrong plugin directory")
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", VERSION):
+        raise ValueError("VERSION must contain a semantic version")
+    skill_text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
+    if not skill_text.startswith("---\nname: football-rules-cz\n"):
+        raise ValueError("Skill folder and frontmatter name must agree")
+    for path in SKILL.rglob("*"):
+        if path.is_symlink():
+            raise ValueError(f"Symlinks are not portable: {path}")
     verify_links()
-    print(f"Verified {len(resources)} canonical resources, links, and plugin metadata.")
+    print(f"Verified {len(resources)} canonical resources, links, and skill structure.")
     if not args.check:
         content = archive_bytes()
         ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
         ARCHIVE.write_bytes(content)
+        checksum = hashlib.sha256(content).hexdigest()
+        (ARCHIVE.parent / "SHA256SUMS.txt").write_text(
+            f"{checksum}  {ARCHIVE.name}\n", encoding="utf-8", newline="\n")
         print(f"Built {ARCHIVE.relative_to(ROOT)} ({len(content):,} bytes).")
 
 
