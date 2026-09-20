@@ -64,8 +64,9 @@ def main():
         raise ValueError(f"Unexpected bundled resources: {actual - set(expected)}")
     portable = json.loads((PLUGIN / "plugin.json").read_text(encoding="utf-8"))
     compatibility = json.loads((PLUGIN / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
+    claude = json.loads((PLUGIN / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
     for key in ("name", "version", "description", "author", "homepage", "repository"):
-        if portable[key] != compatibility[key]:
+        if not portable[key] == compatibility[key] == claude[key]:
             raise ValueError(f"Manifest mismatch: {key}")
     if portable["extensions"]["com.openai"]["interface"] != compatibility["interface"]:
         raise ValueError("Manifest interface mismatch")
@@ -73,6 +74,10 @@ def main():
     entry = next(item for item in marketplace["plugins"] if item["name"] == portable["name"])
     if (ROOT / entry["source"]["path"]).resolve() != PLUGIN:
         raise ValueError("Marketplace points to the wrong plugin directory")
+    claude_marketplace = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
+    claude_entry = next(item for item in claude_marketplace["plugins"] if item["name"] == portable["name"])
+    if (ROOT / claude_entry["source"]).resolve() != PLUGIN:
+        raise ValueError("Claude marketplace points to the wrong plugin directory")
     verify_links()
     content = archive_bytes()
     if args.check:

@@ -28,7 +28,7 @@ Převod byl proveden pomocí pdfplumber 0.11.9 z textové vrstvy PDF. Byla odstr
 
 Jde o pracovní převod, nikoli nové oficiální vydání. Pro kontrolu znění slouží přiložené PDF. Autorská práva k převzatému textu a ilustracím zůstávají původním nositelům práv; tento repozitář jim nepřiděluje novou licenci.
 
-## Plugin pro ChatGPT a Codex
+## Plugin pro ChatGPT, Codex a Claude
 
 [Plugin](plugins/football-rules-cz/) obsahuje skill s úplnými pravidly, PDF a samostatnými diagramy. Nepotřebuje MCP server ani vlastní backend. Model má před první odpovědí přečíst celý text; pokud tomu zabrání limit kontextu, musí přiznat omezený rozsah kontroly a ověřit související ustanovení. Instrukce nezaručují neomezený kontext ani bezchybné odpovědi.
 
@@ -46,6 +46,31 @@ Marketplace v tomto repozitáři se jmenuje `personal`. Pokud už máš jiný ma
 Spusť novou relaci a požádej například:
 
 > Použij $football-rules-cz. Může být hráč v ofsajdu přímo z vhazování? Odpověz podle FAČR 2024 a uveď stránku.
+
+### Claude Code: instalace z veřejného repozitáře
+
+Po sloučení této změny spusť v Claude Code:
+
+```text
+/plugin marketplace add KaliCZ/football-rules-cz
+/plugin install football-rules-cz@football-rules-cz
+```
+
+Potom otevři novou relaci a použij:
+
+```text
+/football-rules-cz:football-rules-cz Může být hráč v ofsajdu přímo z vhazování? Uveď pravidlo a stránku.
+```
+
+Claude používá stejný skill, pravidla a obrázky jako ChatGPT/Codex. Jeho manifest je v `plugins/football-rules-cz/.claude-plugin/plugin.json`, veřejný marketplace v `.claude-plugin/marketplace.json`. Není potřeba přístup do autorova účtu nebo workspace.
+
+### Claude: instalace přes aplikaci
+
+V aplikacích, kde je tato nabídka dostupná, otevři **Customize → Plugins → Personal plugins → + → Add marketplace → Add from a repository** a vlož `https://github.com/KaliCZ/football-rules-cz`. Alternativně lze nahrát [ZIP pluginu](dist/football-rules-cz.zip), pokud aplikace nabízí import vlastního pluginu. Nestahuj ZIP celého repozitáře; distribuční ZIP má manifest a skills přímo v kořeni.
+
+Dostupnost těchto možností závisí na aplikaci a účtu. Instalace v Claude Code ani lokální instalace v Claude Desktop sama o sobě nedokazuje dostupnost na telefonu; mobilní použití tohoto balíčku zatím není otestováno. Repozitář není automaticky zařazen do vestavěného katalogu Anthropic.
+
+Zdroje: [Claude Code marketplaces](https://code.claude.com/docs/en/plugin-marketplaces), [pluginy v aplikaci Claude](https://support.claude.com/en/articles/13837440-use-plugins-in-claude), ověřeno 20. 9. 2026.
 
 ### ChatGPT na Androidu a iOS
 
@@ -68,4 +93,4 @@ python scripts/build_plugin.py
 python scripts/build_plugin.py --check
 ```
 
-Skript používá pouze standardní knihovnu. Synchronizuje 38 zdrojových souborů, ověří odkazy a soulad manifestů a sestaví reprodukovatelný ZIP. Commituj i aktualizované kopie a ZIP. Při vydání změň verzi v obou manifestech; cache instalovaných pluginů je vázána na verzi. Před vydáním znovu proveď testy odpovědí uvedené v návodu.
+Skript používá pouze standardní knihovnu. Synchronizuje 38 zdrojových souborů, ověří odkazy a soulad manifestů a sestaví reprodukovatelný ZIP. Commituj i aktualizované kopie a ZIP. Při vydání změň verzi ve všech třech manifestech; cache instalovaných pluginů je vázána na verzi. Před vydáním znovu proveď testy odpovědí uvedené v návodu.

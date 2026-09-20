@@ -1,6 +1,6 @@
 # Publikace a ověření na telefonu
 
-## Stav verze 0.1.0
+## Stav verze 0.1.1
 
 Balíček obsahuje jeden skill, pravidla FAČR 2024, 36 PNG obrázků a původní PDF. Neobsahuje MCP, instalační hooky ani spustitelný kód. Nejde o oficiální plugin FAČR. Text nezahrnuje změny z let 2025 a 2026.
 
@@ -52,3 +52,16 @@ Níže jsou očekávání, nikoli tvrzení o již provedeném testu modelu. U ka
 - `--check` musí projít, kopie pravidel a obrazových souborů musí přesně souhlasit se zdrojem.
 - ZIP musí být samostatný: všechny relativní odkazy vedou dovnitř balíčku a soubory nespoléhají na původní checkout.
 - Nainstalovat novou verzi, spustit novou relaci a zopakovat scénáře. Výsledky modelu a mobilní aplikace se zapisují až po skutečném provedení.
+
+## Ověření Claude
+
+Claude Code používá veřejný GitHub marketplace z README. V aplikaci Claude lze přidat repozitář nebo nahrát distribuční ZIP tam, kde je příslušná nabídka dostupná. Tyto cesty nevyžadují sdílení autorova účtu či workspace a neznamenají zveřejnění ve vestavěném katalogu Anthropic.
+
+Z kořene repozitáře s nainstalovaným Claude Code lze ověřit oba manifesty:
+
+```sh
+claude plugin validate .claude-plugin/marketplace.json --strict
+claude plugin validate plugins/football-rules-cz --strict
+```
+
+Po instalaci otevři novou relaci a proveď stejné scénáře výše přes `/football-rules-cz:football-rules-cz`. U testu zapiš, zda šlo o Claude Code, web, Desktop nebo mobil. Kontrola manifestů nenahrazuje test odpovědí modelu a lokální instalace nedokládá synchronizaci na telefon.

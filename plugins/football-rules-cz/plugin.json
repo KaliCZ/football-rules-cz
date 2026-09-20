@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "football-rules-cz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Odpovědi v češtině podle pravidel fotbalu FAČR 2024, s odkazy na pravidla a diagramy.",
   "author": {
     "name": "KaliCZ",
