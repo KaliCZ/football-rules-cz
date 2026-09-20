@@ -30,7 +30,7 @@ Pro první otázku zkus:
 
 Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024. V tomto projektu je ověřena instalace a dostupnost na Androidu; úplné načtení pravidel a správnost všech odpovědí nejsou tímto potvrzeny.
 
-### Claude
+### Claude — webová verze
 
 1. Otevři **Settings → Skills** (v části **Customize**).
 2. Klikni na **Add → Upload skill** a vyber stejný stažený skill ZIP.
@@ -38,7 +38,7 @@ Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024. V to
 
 ![Settings → Skills → Add → Upload skill](docs/images/claude-upload-skill.png)
 
-Postup odpovídá přiloženému screenshotu. Dostupnost nahraného skillu v Claude na Androidu zatím čeká na potvrzení.
+Postup odpovídá přiloženému screenshotu. Autor ověřil instalaci do webové verze Claude. Při jeho testu aplikace Claude na Androidu nahraný skill nepoužívala; instalaci na webu proto nepovažuj za podporu v mobilní aplikaci. Pro použití na telefonu je zatím potvrzená aplikace ChatGPT, nikoli Claude.
 
 ### Aktualizace a soubory v odpovědi
 

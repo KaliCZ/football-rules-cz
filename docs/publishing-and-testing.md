@@ -4,7 +4,7 @@
 
 Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024, 36 PNG obrázků a původní PDF mají jednu kanonickou sadu v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a nejsou zapracovány změny z let 2025 a 2026.
 
-Autor projektu potvrdil 20. 9. 2026 nahrání skill ZIPu v ChatGPT přes Settings → Plugins → Browse plugins → Skills → + → Upload from your computer a následnou dostupnost v Android aplikaci. [Návod se screenshoty](../README.md#instalace-skillu) tento postup zachycuje. Postup pro Claude nyní vychází ze screenshotu Settings → Skills → Add → Upload skill. Dostupnost na jeho Android aplikaci zatím čeká na potvrzení.
+Autor projektu potvrdil 20. 9. 2026 nahrání skill ZIPu v ChatGPT přes Settings → Plugins → Browse plugins → Skills → + → Upload from your computer a následnou dostupnost v Android aplikaci. [Návod se screenshoty](../README.md#instalace-skillu) tento postup zachycuje. Postup pro Claude nyní vychází ze screenshotu Settings → Skills → Add → Upload skill. Autor potvrdil instalaci do webové verze Claude, ale při jeho testu aplikace Claude na Androidu nahraný skill nepoužívala. Jde o výsledek konkrétního testu, nikoli příslib synchronizace na mobil.
 
 Potvrzená instalace neznamená ověření všech odpovědí. Níže uvedené scénáře zůstávají neprovedené, dokud nejsou zaznamenány jejich skutečné výsledky. Nová pravidla pro přílohy a citace je potřeba ověřit po nahrání nově sestavené verze; dřívější ruční import se s GitHubem sám neaktualizuje.
 
