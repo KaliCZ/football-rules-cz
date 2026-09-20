@@ -1,0 +1,11 @@
+{
+  "name": "football-rules-cz",
+  "version": "0.1.3",
+  "description": "Odpovědi v češtině podle pravidel fotbalu FAČR 2024, s odkazy na pravidla a diagramy.",
+  "author": {
+    "name": "KaliCZ",
+    "url": "https://github.com/KaliCZ"
+  },
+  "homepage": "https://github.com/KaliCZ/football-rules-cz",
+  "repository": "https://github.com/KaliCZ/football-rules-cz"
+}

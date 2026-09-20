@@ -2,3 +2,7 @@
 *.md text eol=lf
 *.png binary
 *.pdf binary
+*.py text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.zip binary
