@@ -4,15 +4,15 @@
 
 Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024, 36 PNG obrázků a původní PDF mají jednu kanonickou sadu v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a nejsou zapracovány změny z let 2025 a 2026.
 
-Autor projektu potvrdil 20. 9. 2026 nahrání skill ZIPu v ChatGPT přes Settings → Plugins → Browse plugins → Skills → + → Upload from your computer a následnou dostupnost v Android aplikaci. [Návod se screenshoty](../README.md#instalace-skillu) tento postup zachycuje. Postup pro Claude nyní vychází ze screenshotu Settings → Skills → Add → Upload skill. Dostupnost na jeho Android aplikaci zatím čeká na potvrzení.
+Autor projektu potvrdil 20. 9. 2026 nahrání skill ZIPu v ChatGPT přes Settings → Plugins → Browse plugins → Skills → + → Upload from your computer a následnou dostupnost v Android aplikaci. [Návod se screenshoty](../README.md#instalace-skillu) tento postup zachycuje. Postup pro Claude nyní vychází ze screenshotu Settings → Skills → Add → Upload skill. Autor potvrdil instalaci do webové verze Claude, ale při jeho testu aplikace Claude na Androidu nahraný skill nepoužívala. Jde o výsledek konkrétního testu, nikoli příslib synchronizace na mobil.
 
 Potvrzená instalace neznamená ověření všech odpovědí. Níže uvedené scénáře zůstávají neprovedené, dokud nejsou zaznamenány jejich skutečné výsledky. Nová pravidla pro přílohy a citace je potřeba ověřit po nahrání nově sestavené verze; dřívější ruční import se s GitHubem sám neaktualizuje.
 
 ## Vytvoření veřejného vydání
 
-1. Nastav číslo vydání v `VERSION`.
-2. Z kořene repozitáře spusť `python scripts/build_skill.py --check` a `python scripts/build_skill.py`.
-3. Po sloučení změn vytvoř GitHub Release z příslušného commitu. Přilož vygenerovaný `football-rules-cz-skill-` ZIP s číslem verze a `SHA256SUMS.txt` ze složky `dist/`.
+1. Po sloučení změn zvol číslo vydání, například `0.2.1`.
+2. Z vydávaného commitu spusť `python scripts/build_skill.py --check` a `python scripts/build_skill.py --version 0.2.1`. Sestavení vyžaduje explicitní verzi; skript ji neodvozuje z Gitu.
+3. Vytvoř GitHub Release pro tentýž commit s odpovídajícím tagem, v tomto příkladu `v0.2.1`. Přilož vygenerovaný ZIP a `SHA256SUMS.txt` ze složky `dist/`. Číslo tagu a parametr sestavení musí souhlasit.
 4. V poznámkách uveď vydání pravidel, změny skillu a skutečně provedené testy. Uživatelé stahují přílohu vydání, nikoli automatický archiv Source code.
 
 ZIP obsahuje `football-rules-cz/SKILL.md`, metadata skillu a reference. Neobsahuje marketplace, plugin manifesty, screenshoty instalačního návodu ani balicí skript. Generované soubory se necommitují. Distribuce probíhá veřejným stažením a ručním importem; nevyžaduje sdílení autorova účtu ani publikaci do katalogu pluginů.
