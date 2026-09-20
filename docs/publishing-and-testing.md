@@ -1,6 +1,6 @@
 # Publikace a ověření na telefonu
 
-## Stav verze 0.1.1
+## Stav verze 0.1.2
 
 Balíček obsahuje jeden skill, pravidla FAČR 2024, 36 PNG obrázků a původní PDF. Neobsahuje MCP, instalační hooky ani spustitelný kód. Nejde o oficiální plugin FAČR. Text nezahrnuje změny z let 2025 a 2026.
 
@@ -24,7 +24,7 @@ Po zpřístupnění položky v katalogu:
 
 1. Nainstaluj **Pravidla fotbalu 2024 (CZ)** a začni nový chat.
 2. Vyber plugin přes `@`, pokud to aplikace nabízí. Jinak výslovně napiš, že jej má použít.
-3. Ověř první dvě otázky z tabulky. Odpověď musí být česky, uvést vydání 2024 a nabídnout funkční odkaz na konkrétní pravidlo.
+3. Ověř první dvě otázky z tabulky. Každá odpověď musí začínat větou „Tato odpověď vychází z pravidel fotbalu FAČR z roku 2024, platných od 1. 7. 2024; pozdější změny nejsou v přiloženém vydání zahrnuty.“ Ověř to i u navazující odpovědi a upřesňující otázky. Odpověď musí být česky a nabídnout funkční odkaz na konkrétní pravidlo, pokud z něj vyvozuje závěr.
 4. Otevři citaci i diagram z pátého scénáře. Nesmí to být nedostupná lokální cesta na počítač autora.
 5. Ověř dotaz na aktuální pravidla. Odpověď nesmí vydávat staré vydání za současné.
 

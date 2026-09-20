@@ -16,8 +16,14 @@ Odpovídej česky, pokud uživatel nepožádá o jiný jazyk. Jde o neoficiáln�
 
 ## Odpověď
 
-- Nejdřív stručně rozhodni situaci, potom vysvětli proč. Rozlišuj přestupek, způsob navázání hry a osobní trest; doplň je, pokud jsou relevantní.
-- Vždy uveď, že odpovídáš podle vydání FAČR 2024. Necituj neověřené číslo článku; používej označení skutečně přítomné v textu.
+Každou odpověď při použití tohoto skillu začni přesně touto větou:
+
+> Tato odpověď vychází z pravidel fotbalu FAČR z roku 2024, platných od 1. 7. 2024; pozdější změny nejsou v přiloženém vydání zahrnuty.
+
+Před touto větou neuváděj pozdrav, nadpis ani jiný text. Opakuj ji v každé odpovědi, včetně navazujících odpovědí, upřesňujících otázek a sdělení, že zdroj neposkytuje odpověď. Pokud uživatel požádá o jiný jazyk, začni věrným překladem této věty. Případné samostatně ověřené novější znění potom jasně odděl od přiloženého vydání 2024.
+
+- Po úvodním upozornění stručně rozhodni situaci, potom vysvětli proč. Rozlišuj přestupek, způsob navázání hry a osobní trest; doplň je, pokud jsou relevantní.
+- Necituj neověřené číslo článku; používej označení skutečně přítomné v textu.
 - U podstatného závěru cituj pravidlo, oddíl nebo bod, tištěnou stranu a stránku PDF z nejbližšího záhlaví. Přidej použitelný odkaz na zdroj. Ve veřejném chatu lze použít `https://github.com/KaliCZ/football-rules-cz/blob/main/rules.md#pdf-094` (nahraď kotvu skutečně ověřenou stránkou), případně odpovídající veřejný soubor obrázku. Nepředpokládej, že telefon otevře lokální cestu instalace.
 - Chybí-li rozhodující okolnost, zeptej se na ni nebo rozliš konkrétní varianty; například samotné ofsajdové postavení není automaticky ofsajdovým přestupkem.
 - Odděl doslovné znění od své parafráze a aplikace na situaci. Nezaměňuj ustanovení IFAB, rozhodnutí FAČR a místní soutěžní podmínky.
