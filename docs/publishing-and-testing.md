@@ -1,6 +1,6 @@
 # Publikace a ověření na telefonu
 
-## Stav verze 0.1.2
+## Stav verze 0.1.3
 
 Balíček obsahuje jeden skill, pravidla FAČR 2024, 36 PNG obrázků a původní PDF. Neobsahuje MCP, instalační hooky ani spustitelný kód. Nejde o oficiální plugin FAČR. Text nezahrnuje změny z let 2025 a 2026.
 
@@ -11,7 +11,7 @@ Struktura a obsah balíčku jsou kontrolovatelné příkazem `python scripts/bui
 Podle [návodu OpenAI](https://developers.openai.com/plugins/deploy/submission) lze odeslat **Skills only** plugin bez serveru. Veřejné zveřejnění vyžaduje schválení OpenAI a následné publikování vlastníkem. Repozitář není automaticky importován do veřejného katalogu.
 
 1. Vlastník se přihlásí do plugin submission portálu odkazovaného v návodu OpenAI a vybere ověřenou identitu vývojáře. Potřebuje oprávnění Apps Management Write.
-2. Vytvoří návrh typu Skills only. Metadata jsou v [plugin.json](../plugins/football-rules-cz/plugin.json), balíček v [ZIP](../dist/football-rules-cz.zip). Pokud formulář požaduje samotný skill, použije složku `skills/football-rules-cz` z balíčku podle jeho aktuálních pokynů.
+2. Vytvoří návrh typu Skills only. Metadata jsou v [plugin.json](../plugins/football-rules-cz/plugin.json), balíček vytvoří z kořene repozitáře příkazem `python scripts/build_plugin.py` do ignorovaného souboru `dist/football-rules-cz.zip`. Pokud formulář požaduje samotný skill, použije složku `skills/football-rules-cz` z balíčku podle jeho aktuálních pokynů.
 3. Doplní skutečné údaje vydavatele, logo, podporu, zásady ochrany soukromí, podmínky použití a země dostupnosti. Tyto právní a identifikační údaje nejsou tímto repozitářem nahrazeny ani potvrzeny.
 4. Provede níže uvedené scénáře v nové relaci s nainstalovaným pluginem a přiloží skutečné výsledky. Nesplněné scénáře opraví před odesláním.
 5. Odešle návrh ke schválení a po schválení jej publikuje. Odkaz na veřejnou položku potom přidá do README.
@@ -49,7 +49,7 @@ Níže jsou očekávání, nikoli tvrzení o již provedeném testu modelu. U ka
 
 ## Kontrola při vydání
 
-- `--check` musí projít, kopie pravidel a obrazových souborů musí přesně souhlasit se zdrojem.
+- `--check` musí projít. Pravidla, PDF a obrázky mají jedinou kanonickou sadu v adresáři `references` skillu; ZIP je pouze volitelný výstup sestavení, který se necommituje.
 - ZIP musí být samostatný: všechny relativní odkazy vedou dovnitř balíčku a soubory nespoléhají na původní checkout.
 - Nainstalovat novou verzi, spustit novou relaci a zopakovat scénáře. Výsledky modelu a mobilní aplikace se zapisují až po skutečném provedení.
 

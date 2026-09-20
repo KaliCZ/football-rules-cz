@@ -1,4 +1,4 @@
-"""Synchronize the rulebook bundle and create a reproducible plugin archive."""
+"""Validate the canonical skill resources and optionally build a reproducible archive."""
 import argparse
 import io
 import json
@@ -13,8 +13,8 @@ ARCHIVE = ROOT / "dist/football-rules-cz.zip"
 
 
 def resource_files():
-    return [ROOT / "rules.md", *sorted((ROOT / "assets").glob("*.png")),
-            *sorted((ROOT / "sources").glob("*.pdf"))]
+    return [REFERENCES / "rules.md", *sorted((REFERENCES / "assets").glob("*.png")),
+            *sorted((REFERENCES / "sources").glob("*.pdf"))]
 
 
 def verify_links():
@@ -50,18 +50,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Verify generated files without changing them")
     args = parser.parse_args()
-    expected = {source.relative_to(ROOT): source for source in resource_files()}
-    for relative, source in expected.items():
-        destination = REFERENCES / relative
-        if args.check:
-            if not destination.is_file() or destination.read_bytes() != source.read_bytes():
-                raise ValueError(f"Stale bundled resource: {relative}")
-        else:
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            destination.write_bytes(source.read_bytes())
-    actual = {path.relative_to(REFERENCES) for path in REFERENCES.rglob("*") if path.is_file()}
-    if actual != set(expected):
-        raise ValueError(f"Unexpected bundled resources: {actual - set(expected)}")
+    resources = resource_files()
+    for path in resources:
+        if not path.is_file():
+            raise ValueError(f"Missing resource: {path}")
     portable = json.loads((PLUGIN / "plugin.json").read_text(encoding="utf-8"))
     compatibility = json.loads((PLUGIN / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
     claude = json.loads((PLUGIN / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
@@ -79,14 +71,13 @@ def main():
     if (ROOT / claude_entry["source"]).resolve() != PLUGIN:
         raise ValueError("Claude marketplace points to the wrong plugin directory")
     verify_links()
-    content = archive_bytes()
-    if args.check:
-        if not ARCHIVE.is_file() or ARCHIVE.read_bytes() != content:
-            raise ValueError("Stale plugin archive; run scripts/build_plugin.py")
-    else:
+    print(f"Verified {len(resources)} canonical resources, links, and plugin metadata.")
+    if not args.check:
+        content = archive_bytes()
         ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
         ARCHIVE.write_bytes(content)
-    print(f"Verified {len(expected)} bundled resources and plugin ZIP ({len(content):,} bytes).")
+        print(f"Built {ARCHIVE.relative_to(ROOT)} ({len(content):,} bytes).")
+
 
 
 if __name__ == "__main__":

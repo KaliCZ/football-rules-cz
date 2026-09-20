@@ -24,7 +24,7 @@ Před touto větou neuváděj pozdrav, nadpis ani jiný text. Opakuj ji v každ�
 
 - Po úvodním upozornění stručně rozhodni situaci, potom vysvětli proč. Rozlišuj přestupek, způsob navázání hry a osobní trest; doplň je, pokud jsou relevantní.
 - Necituj neověřené číslo článku; používej označení skutečně přítomné v textu.
-- U podstatného závěru cituj pravidlo, oddíl nebo bod, tištěnou stranu a stránku PDF z nejbližšího záhlaví. Přidej použitelný odkaz na zdroj. Ve veřejném chatu lze použít `https://github.com/KaliCZ/football-rules-cz/blob/main/rules.md#pdf-094` (nahraď kotvu skutečně ověřenou stránkou), případně odpovídající veřejný soubor obrázku. Nepředpokládej, že telefon otevře lokální cestu instalace.
+- U podstatného závěru cituj pravidlo, oddíl nebo bod, tištěnou stranu a stránku PDF z nejbližšího záhlaví. Přidej použitelný odkaz na zdroj. Ve veřejném chatu lze použít `https://github.com/KaliCZ/football-rules-cz/blob/main/plugins/football-rules-cz/skills/football-rules-cz/references/rules.md#pdf-094` (nahraď kotvu skutečně ověřenou stránkou), případně odpovídající veřejný soubor obrázku. Nepředpokládej, že telefon otevře lokální cestu instalace.
 - Chybí-li rozhodující okolnost, zeptej se na ni nebo rozliš konkrétní varianty; například samotné ofsajdové postavení není automaticky ofsajdovým přestupkem.
 - Odděl doslovné znění od své parafráze a aplikace na situaci. Nezaměňuj ustanovení IFAB, rozhodnutí FAČR a místní soutěžní podmínky.
 - V balíčku nejsou změny z let 2025 a 2026. Na dotaz po současném znění to výslovně řekni; nevydávej pravidlo z roku 2024 za dnešní. Je-li dostupné prohlížení webu a uživatel chce aktuální stav, ověř jej v oficiálním zdroji a cituj jej odděleně. Jinak vyžádej příslušné novější znění.

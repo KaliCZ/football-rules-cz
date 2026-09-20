@@ -2,9 +2,9 @@
 
 Pravidla fotbalu FAČR z roku 2024 převedená do jednoho Markdown souboru. Vydání je platné od **1. 7. 2024**; změny z let 2025 a 2026 nejsou zapracovány.
 
-- [Pravidla v Markdownu](rules.md)
-- [Původní PDF](sources/pravidla-fotbalu-facr-2024.pdf)
-- [Samostatné obrázky](assets/)
+- [Pravidla v Markdownu](plugins/football-rules-cz/skills/football-rules-cz/references/rules.md)
+- [Původní PDF](plugins/football-rules-cz/skills/football-rules-cz/references/sources/pravidla-fotbalu-facr-2024.pdf)
+- [Samostatné obrázky](plugins/football-rules-cz/skills/football-rules-cz/references/assets/)
 
 ## Obsah
 
@@ -66,7 +66,7 @@ Claude používá stejný skill, pravidla a obrázky jako ChatGPT/Codex. Jeho ma
 
 ### Claude: instalace přes aplikaci
 
-V aplikacích, kde je tato nabídka dostupná, otevři **Customize → Plugins → Personal plugins → + → Add marketplace → Add from a repository** a vlož `https://github.com/KaliCZ/football-rules-cz`. Alternativně lze nahrát [ZIP pluginu](dist/football-rules-cz.zip), pokud aplikace nabízí import vlastního pluginu. Nestahuj ZIP celého repozitáře; distribuční ZIP má manifest a skills přímo v kořeni.
+V aplikacích, kde je tato nabídka dostupná, otevři **Customize → Plugins → Personal plugins → + → Add marketplace → Add from a repository** a vlož `https://github.com/KaliCZ/football-rules-cz`. Alternativně lze nahrát ZIP pluginu vytvořený příkazem `python scripts/build_plugin.py`, pokud aplikace nabízí import vlastního pluginu. Nestahuj ZIP celého repozitáře; distribuční ZIP má manifest a skills přímo v kořeni.
 
 Dostupnost těchto možností závisí na aplikaci a účtu. Instalace v Claude Code ani lokální instalace v Claude Desktop sama o sobě nedokazuje dostupnost na telefonu; mobilní použití tohoto balíčku zatím není otestováno. Repozitář není automaticky zařazen do vestavěného katalogu Anthropic.
 
@@ -76,7 +76,7 @@ Zdroje: [Claude Code marketplaces](https://code.claude.com/docs/en/plugin-market
 
 Mobilní aplikace umí používat pluginy dostupné účtu, ale odkaz na tento GitHub repozitář sám o sobě plugin nenainstaluje. Instalace v lokálním Codex CLI také nedokládá dostupnost v mobilním účtu. Pokud mobil zobrazuje pouze katalog, je třeba plugin nejprve zpřístupnit přes podporované sdílení účtu či workspace, nebo jej zveřejnit ve společném katalogu ChatGPT a Codex.
 
-**Tento plugin zatím nebyl odeslán ke schválení ani zveřejněn v katalogu. Mobilní instalace a odpovědi zatím nejsou ověřené.** [Hotový ZIP](dist/football-rules-cz.zip) slouží pro předání balíčku a publikaci, nikoli jako slíbený import v Android aplikaci.
+**Tento plugin zatím nebyl odeslán ke schválení ani zveřejněn v katalogu. Mobilní instalace a odpovědi zatím nejsou ověřené.** Volitelný ZIP vytvořený příkazem `python scripts/build_plugin.py` slouží pro předání balíčku a publikaci, nikoli jako slíbený import v Android aplikaci.
 
 Postup zveřejnění a konkrétní zkušební otázky jsou v [návodu pro publikaci a testování](docs/publishing-and-testing.md). Po zpřístupnění plugin nainstaluj v sekci Plugins, otevři nový chat a vyber jej přes `@` nebo jej výslovně požádej o použití.
 
@@ -84,7 +84,7 @@ Ověřeno proti dokumentaci dne 20. 9. 2026: [podporované aplikace](https://lea
 
 ### Údržba balíčku
 
-Zdroj pravdy zůstává v kořeni: `rules.md`, `assets/` a `sources/`. Kopie v `plugins/football-rules-cz/skills/football-rules-cz/references/` zajišťují, že plugin funguje i bez pracovního adresáře repozitáře. Neupravuj je samostatně.
+Jediná sada zdrojů je v `plugins/football-rules-cz/skills/football-rules-cz/references/`: `rules.md`, `assets/` a `sources/`. Upravuj přímo tyto soubory. Jsou součástí instalovaného skillu, takže není potřeba kopie v kořeni repozitáře.
 
 Z kořene repozitáře s Pythonem 3.10 nebo novějším:
 
@@ -93,4 +93,4 @@ python scripts/build_plugin.py
 python scripts/build_plugin.py --check
 ```
 
-Skript používá pouze standardní knihovnu. Synchronizuje 38 zdrojových souborů, ověří odkazy a soulad manifestů a sestaví reprodukovatelný ZIP. Commituj i aktualizované kopie a ZIP. Při vydání změň verzi ve všech třech manifestech; cache instalovaných pluginů je vázána na verzi. Před vydáním znovu proveď testy odpovědí uvedené v návodu.
+Skript používá pouze standardní knihovnu. Přepínač `--check` ověří zdrojové soubory, odkazy a soulad manifestů bez vytváření ZIPu. Bez přepínače sestaví reprodukovatelný ZIP do `dist/football-rules-cz.zip`. Složka `dist/` je ignorovaná Gitem; ZIP se necommituje a pro instalaci z GitHub marketplace není potřeba. Pro distribuci jej lze přiložit k vydání na GitHub Releases. Při vydání změň verzi ve všech třech manifestech; cache instalovaných pluginů je vázána na verzi. Před vydáním znovu proveď testy odpovědí uvedené v návodu.
