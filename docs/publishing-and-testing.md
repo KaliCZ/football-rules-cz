@@ -27,6 +27,7 @@ Začni nový chat s nahraným skillem. Zaznamenej datum, aplikaci a verzi, model
 - Odkaz označený jako PDF nesmí směřovat na `rules.md`. Odkaz na textový přepis musí být takto pojmenován.
 - Pokud aplikace neumí zpřístupnit soubor, odpověď nesmí vymyslet přílohu nebo interní adresu. Může uvést jasně označený externí odkaz na správný typ souboru.
 - U textové otázky neotevírat obrázky pro vizuální analýzu jen kvůli jejich přítomnosti v balíčku. Kopírování souboru jako přílohy nevyžaduje jeho vizuální analýzu.
+- U každého pravidla použitého pro odpověď musí skill přečíst celou část „VÝKLAD K PRAVIDLU“, včetně všech podčástí pravidla 12. Nestačí první odpovídající bod výkladu. Pokud již není celý výklad v aktuálním kontextu, musí jej načíst znovu; nemožnost načtení přiznat.
 - Před závěrem musí skill zkontrolovat relevantní souvislosti a výjimky i mimo první nalezenou pasáž. V odpovědi citovat ustanovení, která závěr mění; nejde jen o přidání obecné věty, že výjimky mohou existovat.
 - Při dotazu na současná pravidla musí odpověď přiznat stáří přiloženého vydání.
 
