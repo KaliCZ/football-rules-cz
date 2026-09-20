@@ -38,7 +38,13 @@ Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024. V to
 
 ![Settings → Skills → Add → Upload skill](docs/images/claude-upload-skill.png)
 
-Postup odpovídá přiloženému screenshotu. Autor ověřil instalaci do webové verze Claude. Při jeho testu aplikace Claude na Androidu nahraný skill nepoužívala; instalaci na webu proto nepovažuj za podporu v mobilní aplikaci. Pro použití na telefonu je zatím potvrzená aplikace ChatGPT, nikoli Claude.
+Postup odpovídá přiloženému screenshotu. Autor ověřil instalaci do webové verze Claude.
+
+### Claude — mobilní aplikace: nefunguje
+
+**V aplikaci Claude na Androidu tento skill nefunguje.** Autor ověřil, že mobilní aplikace nahraný skill nepoužívá ani po instalaci ve webové verzi Claude.
+
+Pro použití na telefonu použij aplikaci ChatGPT, kde je funkčnost potvrzená. Na iOS zatím tento skill nebyl otestován.
 
 ### Aktualizace a soubory v odpovědi
 
