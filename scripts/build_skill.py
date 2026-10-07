@@ -12,21 +12,33 @@ REFERENCES = SKILL / "references"
 
 
 def resource_files():
-    return [REFERENCES / "rules.md", *sorted((REFERENCES / "assets").glob("*.png")),
-            *sorted((REFERENCES / "sources").glob("*.pdf"))]
+    return [REFERENCES / "rules.md", *sorted(path for path in REFERENCES.rglob("*.md")
+                                           if path != REFERENCES / "rules.md"),
+            *sorted((REFERENCES / "assets").glob("*.png")),
+            *sorted((REFERENCES / "sources").glob("*.pdf")),
+            REFERENCES / "competition-regulations-provenance.json"]
 
 
 def verify_links():
-    text = (REFERENCES / "rules.md").read_text(encoding="utf-8")
+    for document in [SKILL / "SKILL.md", *sorted(REFERENCES.rglob("*.md"))]:
+        verify_document_links(document)
+
+
+def verify_document_links(document):
+    text = document.read_text(encoding="utf-8")
     anchors = set(re.findall(r'<a id="([^"]+)"', text))
     for target in re.findall(r"\]\(([^)]+)\)", text):
         if "://" in target:
             continue
         filename, _, fragment = target.partition("#")
         if filename:
-            resolved = (REFERENCES / filename).resolve()
-            if not resolved.is_relative_to(REFERENCES) or not resolved.is_file():
+            resolved = (document.parent / filename).resolve()
+            if not resolved.is_relative_to(SKILL) or not resolved.is_file():
                 raise ValueError(f"Missing or unsafe reference: {target}")
+            if fragment and resolved.suffix == ".md":
+                target_anchors = set(re.findall(r'<a id="([^"]+)"', resolved.read_text(encoding="utf-8")))
+                if fragment not in target_anchors:
+                    raise ValueError(f"Missing anchor: {target}")
         elif fragment not in anchors:
             raise ValueError(f"Missing anchor: {target}")
 

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Pravidla fotbalu 2024 (CZ)"
-  short_description: "Česká pravidla fotbalu 2024 s citacemi"
+  display_name: "Pravidla fotbalu a Soutěžní řád (CZ)"
+  short_description: "Pravidla FAČR 2024 a Soutěžní řád 2026 s citacemi"
   default_prompt: "Použij $football-rules-cz a vysvětli ofsajd přímo z vhazování podle FAČR 2024 s citací."

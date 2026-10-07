@@ -2,7 +2,7 @@
 
 ## Stav
 
-Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024, 36 PNG obrázků a původní PDF mají jednu kanonickou sadu v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a nejsou zapracovány změny z let 2025 a 2026.
+Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024 a Soutěžní řád označený účinností od 26. 6. 2026, jejich přepisy, PNG obrázky a původní PDF mají jednu kanonickou sadu v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a Pravidla fotbalu nezahrnují změny z let 2025 a 2026. Soutěžní řád má vlastní vydání a účinnost.
 
 Autor projektu potvrdil 20. 9. 2026 následující postupy:
 
@@ -26,7 +26,7 @@ ZIP obsahuje `football-rules-cz/SKILL.md`, metadata skillu a reference. Neobsahu
 
 Začni nový chat s nahraným skillem. Zaznamenej datum, aplikaci a verzi, model, dotaz, odpověď a funkčnost příloh či odkazů.
 
-- Každá odpověď, včetně navazující a upřesňující otázky, musí začínat upozorněním na pravidla FAČR 2024 uvedeným ve `SKILL.md`.
+- Každá odpověď podle přiložených Pravidel fotbalu, včetně navazující a upřesňující otázky, musí začínat upozorněním na pravidla FAČR 2024 uvedeným ve `SKILL.md`. Odpovědi pouze podle Soutěžního řádu používají vlastní úvod a údaj o ověřené účinnosti podle `references/competition-regulations.md`.
 - Zkus „Ukaž mi původní PDF na straně 162.“ Je-li dostupný nástroj pro přílohy, odpověď má zpřístupnit přiložené PDF v chatu. Pokud otevře celé PDF bez skoku, musí uvést stránku 162 zvlášť; tištěná strana je 160.
 - Každý podstatný závěr musí obsahovat číslo a název pravidla i konkrétní oddíl nebo bod výkladu, nikoli jen odkaz a stránku. U přímého vhazování očekávej „Pravidlo 11 – Ofsajd, oddíl 3 – Není ofsajd; tištěná strana 93, PDF strana 95.“ Číslo oddílu se nesmí zaměnit za odlišně číslovaný bod výkladu.
 - Odkaz označený jako PDF nesmí směřovat na `rules.md`. Odkaz na textový přepis musí být takto pojmenován.
@@ -59,3 +59,25 @@ Tyto scénáře jsou připravené pro ruční ověření, nikoli již provedené
 
 - „Útočník v ofsajdové pozici obdržel míč přímo z vhazování. Má se pískat ofsajd?“ Odpověď musí zohlednit oddíl 3 „Není ofsajd“, nikoli skončit u obecné definice pozice nebo aktivního zapojení.
 - „Útočník v ofsajdové pozici získal míč po doteku obránce. Je to ofsajd?“ Odpověď nesmí rozhodnout podle samotného slova „dotek“. Musí rozlišit vědomé hraní, odraz a obranný zákrok, případně se doptat, a citovat související ustanovení pravidla 11.
+
+## Lokální automatické kontroly
+
+Z kořene repozitáře spusť `python -m unittest discover -s tests -v` a `python scripts/build_skill.py --check`. Testy používají pouze standardní knihovnu Pythonu; OCR se neopakuje.
+
+## Rozšíření o Soutěžní řád
+
+Balíček obsahuje PDF, úplný přepis hlavního řádu a sedmi příloh, označené OCR obrazových stran 83–87 a obrázky tabulek a diagramů. Lokální kontrola ověřuje pokrytí všech 87 stran, kontrolní součet PDF, hlavní paragrafy v rozsahu 1–73 včetně § 41a, 41b, 42a a 42b, přílohy, OCR a odkazy; sestavení ověřuje obsah a reprodukovatelnost ZIPu. Tyto kontroly nenahrazují ruční ověření odpovědí modelu ani kontrolu pozdějších novel na FAČR.
+
+Následující scénáře jsou připravené pro ruční ověření a nejsou zaznamenanými výsledky:
+
+| Dotaz / podmínka | Očekávání |
+| --- | --- |
+| „Na co odkazuje § 71 při podání protestu?“ | Přečíst § 71 – Protest, PDF/tištěná strana 50; uvést Procesní řád a neodvozovat z tohoto ustanovení lhůtu nebo poplatek. |
+| Webové nástroje vypnuté | Odpovídat z přiloženého přepisu a PDF; nevyžadovat internet nebo nové nahrání dokumentu pro běžnou otázku. |
+| „Platilo vše již 26. 6. 2026?“ | Zohlednit § 73 odst. 3, PDF 52 a v něm uvedené účinnosti novel 1. 7. 2026; neodvozovat účinnost každého ustanovení z titulku. |
+| „Jaký je soutěžní důsledek rozhodnutí rozhodčího?“ | Oddělit herní rozhodnutí podle Pravidel fotbalu od administrativního důsledku podle Soutěžního řádu; načíst oba zdroje a případně vyžádat rozpis soutěže. |
+| „Co říká § 1?“ | Zjistit, zda jde o hlavní řád nebo některou přílohu, pokud to kontext neurčuje; citace musí rozlišit vlastní číslování příloh. |
+| „Vysvětli příčný spád podle diagramu na straně 85.“ | Otevřít `assets/soutezni-rad-pdf-085.png`, ověřit popisky a vztahy; neodhadovat diagram pouze z OCR. |
+| „Ukaž mi Soutěžní řád na straně 50.“ | Zpřístupnit správné přiložené PDF podle možností aplikace, uvést stránku 50; nepoužít PDF Pravidel fotbalu ani posun o dvě strany. |
+| Navazující otázka pouze k Soutěžnímu řádu | Použít přesný úvod pro Soutěžní řád; nepřipisovat mu účinnost Pravidel fotbalu 2024. |
+| Původní otázka na ofsajd z vhazování | Zachovat původní zdroj, upozornění na vydání 2024 a citaci pravidla 11; nevyžadovat Soutěžní řád pro čistě herní otázku. |

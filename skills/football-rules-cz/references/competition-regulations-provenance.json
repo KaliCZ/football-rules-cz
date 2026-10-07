@@ -1,0 +1,714 @@
+{
+  "source": "User-uploaded PDF; official listing URL is a provenance reference, not a verified download.",
+  "official_listing": "https://www.fotbal.cz/urednideska/uredni-deska-predpisy/426?category=1",
+  "pdf": "sources/soutezni-rad-facr-2026-06-26.pdf",
+  "sha256": "2aa7ce271ab02c79e7f0c591f8f8531fdc97fbaa9b0b198ae4b830f8d018b883",
+  "edition_label": "s účinností od 26. 6. 2026",
+  "page_count": 87,
+  "pdftotext": "pdftotext version 25.03.0",
+  "pymupdf": "1.26.6",
+  "tesseract": "tesseract 5.5.0",
+  "ocr_language": "ces",
+  "ocr_dpi": 300,
+  "ocr_psm": 3,
+  "ocr_model_sha256": "934bcaf97ef3348413263331131c9fa7f55f30db333c711929c124fb635f7e1b",
+  "ocr_model_source": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/ces.traineddata",
+  "pages": [
+    {
+      "page": 1,
+      "printed_page": 1,
+      "native_text_characters": 1179,
+      "native_text_sha256_without_whitespace": "7978c01f9232b16563688939a2250fd1b2f719e627b19fda511ccb083d44fcd3",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 2,
+      "printed_page": 2,
+      "native_text_characters": 2455,
+      "native_text_sha256_without_whitespace": "9347aeedfab4ad0b81cb42ead1809a7e4cec9c229649b20d79f12ed262d5ab0f",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 3,
+      "printed_page": 3,
+      "native_text_characters": 2991,
+      "native_text_sha256_without_whitespace": "a04b55afebb85c9b18244850f1964afb7cf9605640f714f1ac15bea6cf0f914e",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 4,
+      "printed_page": 4,
+      "native_text_characters": 2393,
+      "native_text_sha256_without_whitespace": "cda2d4a2a7a52f8ffa5ff063f9fb37d283be83f51641c27d919e3a1e8540d1dd",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 5,
+      "printed_page": 5,
+      "native_text_characters": 2394,
+      "native_text_sha256_without_whitespace": "052722f2bb6e4b947c0139f603928b89b3bee3fa34fa6308e5fc42a00820c5a8",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 6,
+      "printed_page": 6,
+      "native_text_characters": 2724,
+      "native_text_sha256_without_whitespace": "861c286a4be6f2b29f1f9cb184045f48a219ef599c290687e2e9fbcdd0f334b3",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 7,
+      "printed_page": 7,
+      "native_text_characters": 2698,
+      "native_text_sha256_without_whitespace": "7c5e6652833b1971de0b886b845e933bbffb27804b84153ccc272d7940facdcc",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 8,
+      "printed_page": 8,
+      "native_text_characters": 2763,
+      "native_text_sha256_without_whitespace": "cd4bf149f95134678c627ee282282fdfdd19e81028a5b31ad47b6145c55e631f",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 9,
+      "printed_page": 9,
+      "native_text_characters": 2578,
+      "native_text_sha256_without_whitespace": "8d7806b83ec2b9310e60a7a510b75e4136c755f3d37d52b8fcced73025f7919c",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 10,
+      "printed_page": 10,
+      "native_text_characters": 1814,
+      "native_text_sha256_without_whitespace": "c543129a7a0ef30137ed3b9a99d08341abf9eaecac05e3f8460a06582c4c8084",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 11,
+      "printed_page": 11,
+      "native_text_characters": 2229,
+      "native_text_sha256_without_whitespace": "f9f6e0203d331ea975a29b218f14a95922d33bb6250ce265171ee39f43baefbb",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 12,
+      "printed_page": 12,
+      "native_text_characters": 2452,
+      "native_text_sha256_without_whitespace": "c86485f7ef92744e470ecd04c417b80e2d5e4d9184802b44e376b67d97db98de",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 13,
+      "printed_page": 13,
+      "native_text_characters": 2610,
+      "native_text_sha256_without_whitespace": "dc709151c41a7b27d5c6504761fd4600e81693f58278dca38b6836919a1430b9",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-013.png"
+    },
+    {
+      "page": 14,
+      "printed_page": 14,
+      "native_text_characters": 2741,
+      "native_text_sha256_without_whitespace": "7cf07d117322edc5389a92b113b3b7a66b86a3d5d1992dad6804f3df204462c6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 15,
+      "printed_page": 15,
+      "native_text_characters": 3431,
+      "native_text_sha256_without_whitespace": "355cab948876170fad5e8d59d9d1c4d56f800608cd46778d45ecabffee81ce9c",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 16,
+      "printed_page": 16,
+      "native_text_characters": 3013,
+      "native_text_sha256_without_whitespace": "2fa21efbbfaaccc2e98c533ce9782606f51004cf82c34d53b5f88b99a97771ca",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 17,
+      "printed_page": 17,
+      "native_text_characters": 2607,
+      "native_text_sha256_without_whitespace": "294e76ad5280168873bb9d715394784abcf4da8ffa0f3268e69ffb927ff9d60b",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 18,
+      "printed_page": 18,
+      "native_text_characters": 3059,
+      "native_text_sha256_without_whitespace": "5e21c27f6ba6fa3004efe7f3087fef4e0198a1aaff93d49ff836b7c8466cc607",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 19,
+      "printed_page": 19,
+      "native_text_characters": 3481,
+      "native_text_sha256_without_whitespace": "2913fc50e87d41142e7d947a6711b2db02fa7250e3bed3e3800c6715c931af9e",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 20,
+      "printed_page": 20,
+      "native_text_characters": 3258,
+      "native_text_sha256_without_whitespace": "4070ec6c0a75ba7b41b483553c5a75a33b6081d2e11d167c063defa1646aa49d",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 21,
+      "printed_page": 21,
+      "native_text_characters": 2706,
+      "native_text_sha256_without_whitespace": "19ab722a6ca2ccd7de6947c8ddaa669ed144045f641c2a104401132a73448341",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 22,
+      "printed_page": 22,
+      "native_text_characters": 1968,
+      "native_text_sha256_without_whitespace": "8e282fd08281c1e2f25722366d3f74abbe71244657ddaf11dd921241f6164ec0",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 23,
+      "printed_page": 23,
+      "native_text_characters": 2287,
+      "native_text_sha256_without_whitespace": "ac0f734dd94b0abfde09e5174dd99ea0e7bb6c9b8b246961f21d2def9b7e08d6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 24,
+      "printed_page": 24,
+      "native_text_characters": 2126,
+      "native_text_sha256_without_whitespace": "d819e560a8dff5282197acfe96682b7ab0241012025b6eb4c3a0bfd501078c7e",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 25,
+      "printed_page": 25,
+      "native_text_characters": 1901,
+      "native_text_sha256_without_whitespace": "eab8bc4b359d4633cc7815c7e750e7d53f27a86c9270dd296ab51bbc8a475509",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 26,
+      "printed_page": 26,
+      "native_text_characters": 2790,
+      "native_text_sha256_without_whitespace": "3fdbfeb80859e2235a25bec97e89da1ad202852f6e1b5e8b08fd33e68ba19b3c",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 27,
+      "printed_page": 27,
+      "native_text_characters": 2194,
+      "native_text_sha256_without_whitespace": "7527a53b5217627932a520d63823cc006a9aeff7b51816ef417ee35a7043ffc0",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 28,
+      "printed_page": 28,
+      "native_text_characters": 2744,
+      "native_text_sha256_without_whitespace": "4f89c7e30678643067c2942fc39d0beeed7fa19ba644850871703d8bc69a3d25",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 29,
+      "printed_page": 29,
+      "native_text_characters": 2682,
+      "native_text_sha256_without_whitespace": "dda5898fec0cdfd350cb6883f8e6df635c3ced65331d961d8858d6f3d9039f5b",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 30,
+      "printed_page": 30,
+      "native_text_characters": 2330,
+      "native_text_sha256_without_whitespace": "db8792a36aa3ff51dd94a2e662204e40d93775940ee4386a9de42f14c68ff562",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 31,
+      "printed_page": 31,
+      "native_text_characters": 3254,
+      "native_text_sha256_without_whitespace": "e4ef864c22886af6db6be0dea6b18f9bedcb0c0232646551744670cd98f0bd20",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-031.png"
+    },
+    {
+      "page": 32,
+      "printed_page": 32,
+      "native_text_characters": 2728,
+      "native_text_sha256_without_whitespace": "986e64300fd12b98bc3bdb646ede3a2bb7eaa727885b9e0e3f2a4bcccb65b69f",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-032.png"
+    },
+    {
+      "page": 33,
+      "printed_page": 33,
+      "native_text_characters": 2937,
+      "native_text_sha256_without_whitespace": "74cf176109f81d3d20654c0092a21fe48578793ca994c6edc485624b3f558b52",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 34,
+      "printed_page": 34,
+      "native_text_characters": 2803,
+      "native_text_sha256_without_whitespace": "bd8276f655322f507cef61460b54926d5efc31e37e747c4de850960e4b88c6d6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 35,
+      "printed_page": 35,
+      "native_text_characters": 2394,
+      "native_text_sha256_without_whitespace": "c5d1a23e93ac059c0895de82466594ed58ad233875ddb34300aff1999de073e0",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 36,
+      "printed_page": 36,
+      "native_text_characters": 2579,
+      "native_text_sha256_without_whitespace": "b7b80236257990df7a8187c7362965ac3aadb6ed9eeaea33a973e7ddd467e324",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 37,
+      "printed_page": 37,
+      "native_text_characters": 1952,
+      "native_text_sha256_without_whitespace": "3a578aa769c157085c2bbf816983353f54dff64e13ee42f5c6497186bedd716a",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 38,
+      "printed_page": 38,
+      "native_text_characters": 2454,
+      "native_text_sha256_without_whitespace": "2191409940f79833bb921b2ac79e2b4b4eb5164ed67db315245b08e6ef02aafb",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 39,
+      "printed_page": 39,
+      "native_text_characters": 2945,
+      "native_text_sha256_without_whitespace": "b8a6944fa0f403bae598cdad84a8e208db7bfb7e7ca01fcf547164f4b2543931",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 40,
+      "printed_page": 40,
+      "native_text_characters": 2660,
+      "native_text_sha256_without_whitespace": "f28c2125668b8f9ff30344554c57753f1716ead04c8f1049f4ff0dc8b68547eb",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 41,
+      "printed_page": 41,
+      "native_text_characters": 3413,
+      "native_text_sha256_without_whitespace": "ef266855273cfe761f2e127141fffdef4de92c7af4b494c4220f70f3c21d8b06",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 42,
+      "printed_page": 42,
+      "native_text_characters": 2660,
+      "native_text_sha256_without_whitespace": "b67420601dbf11dbce2ba7334bb8f1613c9f296d598d6ef8bc8c19d5dd68c25d",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 43,
+      "printed_page": 43,
+      "native_text_characters": 2917,
+      "native_text_sha256_without_whitespace": "77458338f5096456da384233925c3c91aa240a2aac867bd6dee22832b34819e6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 44,
+      "printed_page": 44,
+      "native_text_characters": 2659,
+      "native_text_sha256_without_whitespace": "97ea156430fa5431a602d5552e9ad03c1cb94fabcd34105649e565f617fdfd03",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 45,
+      "printed_page": 45,
+      "native_text_characters": 2721,
+      "native_text_sha256_without_whitespace": "e3720c3b533124887687fbd816a125157ce9fb4a5931b58e7c144c1abe1feda0",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 46,
+      "printed_page": 46,
+      "native_text_characters": 3210,
+      "native_text_sha256_without_whitespace": "498b9c0a1394a9f8702c75f8301e158fb36d130f0da118b471585b5d0adb7b34",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 47,
+      "printed_page": 47,
+      "native_text_characters": 3059,
+      "native_text_sha256_without_whitespace": "0d38223b1613fefdb4dae902abfac51689f6b79ad05d8dd29f0ca7ffe0d025eb",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 48,
+      "printed_page": 48,
+      "native_text_characters": 2950,
+      "native_text_sha256_without_whitespace": "0d25d91cfb4fd89995a081ab973994fe3fa0655969145cb0e3d3c014ed03327b",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 49,
+      "printed_page": 49,
+      "native_text_characters": 2092,
+      "native_text_sha256_without_whitespace": "f8c0bfa4d0ed5f7ca733797d3f0b99058be6cf106b7c89012acb0249be707d90",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 50,
+      "printed_page": 50,
+      "native_text_characters": 2707,
+      "native_text_sha256_without_whitespace": "b85d581ad98cc7364085c426ae10948ad62b851a8624b9143c42cda332c2e617",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 51,
+      "printed_page": 51,
+      "native_text_characters": 3472,
+      "native_text_sha256_without_whitespace": "1e9f0fb74efd42ba0f4456e24255d7864ebe122b060ccd11809126efda4f3e2b",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 52,
+      "printed_page": 52,
+      "native_text_characters": 838,
+      "native_text_sha256_without_whitespace": "8397caa8c641a0a82c6f1395d41cb508ae94bf8dca29b80fcfaeb94bb4f7dd0a",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 53,
+      "printed_page": 53,
+      "native_text_characters": 1488,
+      "native_text_sha256_without_whitespace": "ed38cf7bceab7a72c159e8a955af8f2ad2d8e7f91bb07e6494d3b1762534bf57",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-053.png"
+    },
+    {
+      "page": 54,
+      "printed_page": 54,
+      "native_text_characters": 2761,
+      "native_text_sha256_without_whitespace": "e43b6c04809f582a6f33d8129263f95bc421f00075e933b554dce1869973f41e",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 55,
+      "printed_page": 55,
+      "native_text_characters": 2891,
+      "native_text_sha256_without_whitespace": "ad6b0cc1fcd2ba934c7b4f1b29948981d4c6bd7b4f7c642247feb0160c1314a6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 56,
+      "printed_page": 56,
+      "native_text_characters": 2867,
+      "native_text_sha256_without_whitespace": "29118e000549183f273e1c2b3120988bb42637e0629333f51a8d6cad3ace4aa7",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 57,
+      "printed_page": 57,
+      "native_text_characters": 2750,
+      "native_text_sha256_without_whitespace": "c143088b168e75da3eae27fa63fcbc402afc0c088b747d277eebf352d2e77382",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 58,
+      "printed_page": 58,
+      "native_text_characters": 3077,
+      "native_text_sha256_without_whitespace": "e60414288068e542d2a35492a8a63c6ce992c12a3bd849a6d6daf03de0865fc1",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 59,
+      "printed_page": 59,
+      "native_text_characters": 3097,
+      "native_text_sha256_without_whitespace": "e77ba9b04d35e44748022e6f409b67c8e33923e9076b98007fe026ad93d20d81",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 60,
+      "printed_page": 60,
+      "native_text_characters": 549,
+      "native_text_sha256_without_whitespace": "8f67fcede885bb27d0016f2a68085e9eeda271e48a0ad17a7ce4de4e5e56c359",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-060.png"
+    },
+    {
+      "page": 61,
+      "printed_page": 61,
+      "native_text_characters": 1360,
+      "native_text_sha256_without_whitespace": "b81b32444fae62a7545c04f8ec39a8c0b408637e017a37feb20a2c401b630c4e",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-061.png"
+    },
+    {
+      "page": 62,
+      "printed_page": 62,
+      "native_text_characters": 2935,
+      "native_text_sha256_without_whitespace": "4bfa540b05ce9ed5da0c7a22dcd2814c1a6eb27348771a067eebc6d27df599b1",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-062.png"
+    },
+    {
+      "page": 63,
+      "printed_page": 63,
+      "native_text_characters": 1772,
+      "native_text_sha256_without_whitespace": "a1a8085dc39a04e58736556d294f9553eecb4c0abbacc68e08cd339b1aea1b2f",
+      "ocr_characters": 0,
+      "image": "assets/soutezni-rad-pdf-063.png"
+    },
+    {
+      "page": 64,
+      "printed_page": 64,
+      "native_text_characters": 313,
+      "native_text_sha256_without_whitespace": "104800fd9251b8efa68c0c432c1e000a423d3371c991a49394ae03496bed7ae4",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 65,
+      "printed_page": 65,
+      "native_text_characters": 2238,
+      "native_text_sha256_without_whitespace": "f33a873819b0d3266ad9656dc411587e340ef9afc054f91d2d0876ba3647e034",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 66,
+      "printed_page": 66,
+      "native_text_characters": 2786,
+      "native_text_sha256_without_whitespace": "23537b09b36464a140619cd572c19c112735eb8d62e4c2e9d69ea9d318d749ac",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 67,
+      "printed_page": 67,
+      "native_text_characters": 2741,
+      "native_text_sha256_without_whitespace": "1db759400d4ae6da66984c5b74a2af5635f62f05b6d76f93c166d6618b9583c6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 68,
+      "printed_page": 68,
+      "native_text_characters": 2810,
+      "native_text_sha256_without_whitespace": "02029a5d24fa4238a77df654fe0d4a6419532eb4f58f81a63df1e2fc2f0f4c26",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 69,
+      "printed_page": 69,
+      "native_text_characters": 2334,
+      "native_text_sha256_without_whitespace": "089617342c3b17056fe402990824cd84f6de83f0bf4017fd4c52ef9097ed194a",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 70,
+      "printed_page": 70,
+      "native_text_characters": 1865,
+      "native_text_sha256_without_whitespace": "dbd1ed286135c21948c72774b25a1c616cd5be1ea03f5f0f185ba3d6831533a2",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 71,
+      "printed_page": 71,
+      "native_text_characters": 342,
+      "native_text_sha256_without_whitespace": "535abda64aff47097b7a180ae1da6fdb8e7458541b81fa82489fabcd032e0787",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 72,
+      "printed_page": 72,
+      "native_text_characters": 2501,
+      "native_text_sha256_without_whitespace": "db241577b5575b6dbdc06a6e7bd0314740a74ffb99350d97253c2008680c9a3f",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 73,
+      "printed_page": 73,
+      "native_text_characters": 2942,
+      "native_text_sha256_without_whitespace": "6cfe65ca3b107c7be9536215a9ddb8f4e3262fc14afe010d0b56a2fc9539bd7c",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 74,
+      "printed_page": 74,
+      "native_text_characters": 2568,
+      "native_text_sha256_without_whitespace": "7bf2c7fefa75359a4fa0a7ecea58653fee6f2540724da9638013bd3cd3601b44",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 75,
+      "printed_page": 75,
+      "native_text_characters": 2625,
+      "native_text_sha256_without_whitespace": "9dcfcb68d2b992a5c39ae288d9b519bd93e209a1b5bb42ee375c87b81b050db0",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 76,
+      "printed_page": 76,
+      "native_text_characters": 2245,
+      "native_text_sha256_without_whitespace": "370e50f54cff49f23d561064899262911dc3ce98f41cd231014fb38d05913f8c",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 77,
+      "printed_page": 77,
+      "native_text_characters": 2403,
+      "native_text_sha256_without_whitespace": "84d83de1ae384687e6dc61b54fa754c8f53b073655dc68739607a8737a3c2d01",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 78,
+      "printed_page": 78,
+      "native_text_characters": 2594,
+      "native_text_sha256_without_whitespace": "b96cdfb26b7fcc8aa219f75e94a5d27584e52d8962592ff327a4df6b417373ab",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 79,
+      "printed_page": 79,
+      "native_text_characters": 2164,
+      "native_text_sha256_without_whitespace": "9a98c2e3feb5b0c6712515dd6c4ec962187ff5aaedf635d40f93f952286432c6",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 80,
+      "printed_page": 80,
+      "native_text_characters": 2614,
+      "native_text_sha256_without_whitespace": "d88b6d71891e70d9f1bf15710e9cef34ae8e33b32042711acb70f3f41480651e",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 81,
+      "printed_page": 81,
+      "native_text_characters": 2453,
+      "native_text_sha256_without_whitespace": "fe40ee403a9bb8e68c4eeb81831045bf05ed28122dc1ff09f368324792425f98",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 82,
+      "printed_page": 82,
+      "native_text_characters": 2612,
+      "native_text_sha256_without_whitespace": "d6b223b84136b4170ce25043f0de6d0f3eb411312bbe83d8b88dffb9ac1ea67f",
+      "ocr_characters": 0,
+      "image": null
+    },
+    {
+      "page": 83,
+      "printed_page": 83,
+      "native_text_characters": 1074,
+      "native_text_sha256_without_whitespace": "fd3eb45e9830c1164279b4f0d78f6f52eb139e80b029fead16f977e10a369744",
+      "ocr_characters": 654,
+      "image": "assets/soutezni-rad-pdf-083.png"
+    },
+    {
+      "page": 84,
+      "printed_page": 84,
+      "native_text_characters": 175,
+      "native_text_sha256_without_whitespace": "f89bf8db54a44a05b3c22f99a60ce767fde4ab58e9b1c76d961b17d076916858",
+      "ocr_characters": 206,
+      "image": "assets/soutezni-rad-pdf-084.png"
+    },
+    {
+      "page": 85,
+      "printed_page": 85,
+      "native_text_characters": 0,
+      "native_text_sha256_without_whitespace": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ocr_characters": 296,
+      "image": "assets/soutezni-rad-pdf-085.png"
+    },
+    {
+      "page": 86,
+      "printed_page": 86,
+      "native_text_characters": 0,
+      "native_text_sha256_without_whitespace": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ocr_characters": 1657,
+      "image": "assets/soutezni-rad-pdf-086.png"
+    },
+    {
+      "page": 87,
+      "printed_page": 87,
+      "native_text_characters": 0,
+      "native_text_sha256_without_whitespace": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ocr_characters": 1527,
+      "image": "assets/soutezni-rad-pdf-087.png"
+    }
+  ]
+}
