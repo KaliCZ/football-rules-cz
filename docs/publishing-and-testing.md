@@ -64,11 +64,9 @@ Tyto scénáře jsou připravené pro ruční ověření, nikoli již provedené
 
 Z kořene repozitáře spusť `python -m unittest discover -s tests -v` a `python scripts/build_skill.py --check`. Testy používají pouze standardní knihovnu Pythonu; OCR se neopakuje.
 
-## Rozšíření o Soutěžní řád
+## Scénáře odpovědí podle Soutěžního řádu
 
-Balíček obsahuje PDF, úplný přepis hlavního řádu a sedmi příloh, označené OCR obrazových stran 83–87 a obrázky tabulek a diagramů. Lokální kontrola ověřuje pokrytí všech 87 stran, kontrolní součet PDF, hlavní paragrafy v rozsahu 1–73 včetně § 41a, 41b, 42a a 42b, přílohy, OCR a odkazy; sestavení ověřuje obsah a reprodukovatelnost ZIPu. Tyto kontroly nenahrazují ruční ověření odpovědí modelu ani kontrolu pozdějších novel na FAČR.
-
-Následující scénáře jsou připravené pro ruční ověření a nejsou zaznamenanými výsledky:
+Automatické kontroly souborů nenahrazují ruční ověření odpovědí modelu ani kontrolu pozdějších novel na FAČR; následující scénáře nejsou zaznamenanými výsledky.
 
 | Dotaz / podmínka | Očekávání |
 | --- | --- |
@@ -81,3 +79,13 @@ Následující scénáře jsou připravené pro ruční ověření a nejsou zazn
 | „Ukaž mi Soutěžní řád na straně 50.“ | Zpřístupnit správné přiložené PDF podle možností aplikace, uvést stránku 50; nepoužít PDF Pravidel fotbalu ani posun o dvě strany. |
 | Navazující otázka pouze k Soutěžnímu řádu | Použít přesný úvod pro Soutěžní řád; nepřipisovat mu účinnost Pravidel fotbalu 2024. |
 | Původní otázka na ofsajd z vhazování | Zachovat původní zdroj, upozornění na vydání 2024 a citaci pravidla 11; nevyžadovat Soutěžní řád pro čistě herní otázku. |
+
+## Původ zdrojů a údržba převodu
+
+Pravidla fotbalu platná od 1. 7. 2024 zpracovala Pravidlová komise FAČR a vydalo Nakladatelství Olympia (ISBN 978-80-7376-695-5). PDF bylo staženo 20. 9. 2026 z [OFS Jičín](https://ofs-jicin.cz/wp-content/uploads/2024/08/pravidla-fotbalu-facr-2024.pdf); dostupné je také na [webu FAČR](https://www.fotbal.cz/facr/document/download/136707). SHA-256: `deca4c192c10ba0a5b70882eb6fbb26cdf2b011d3b5fc81aa5de95acb3ae7306`. Text byl převeden pomocí pdfplumber 0.11.9; obrázky zachovávají původní grafický obsah.
+
+PDF Soutěžního řádu dodal uživatel 7. 10. 2026; nástroje, kontrolní součty a pokrytí stran zaznamenávají [metadata převodu](../skills/football-rules-cz/references/competition-regulations-provenance.json). [Pokyny k výkladu](../skills/football-rules-cz/references/competition-regulations.md) popisují účinnost, citace a omezení OCR.
+
+Převod Soutěžního řádu se při sestavení ZIPu neopakuje. Pro jeho ruční obnovu slouží [extrakční skript](../scripts/extract_competition_regulations.py), který vyžaduje Poppler (`pdftotext`), PyMuPDF a Tesseract s českým modelem z projektu `tesseract-ocr/tessdata_fast`. Parametr `--tessdata-dir` musí ukazovat na složku se souborem `ces.traineddata`; skript před převodem ověří kontrolní součty PDF i modelu podle zaznamenané verze.
+
+Skript přepisuje vygenerovaný přepis, obrázky a metadata, proto před spuštěním zkontroluj místní změny. Nové vydání vyžaduje kontrolu mapování stran a účinnosti, nikoli jen změnu kontrolního součtu; po převodu spusť lokální automatické kontroly uvedené výše.
