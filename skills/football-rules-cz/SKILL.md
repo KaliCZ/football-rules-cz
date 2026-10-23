@@ -3,9 +3,11 @@ name: football-rules-cz
 description: Odpovídá česky na otázky o pravidlech fotbalu FAČR 2024 a Soutěžním řádu FAČR 2026 s citacemi. Pomáhá formulovat popis přestupků do Zápisu o utkání (ZoU) a Zprávy delegáta podle metodického pokynu č. 02-2024. Použij pro herní situace, rozhodnutí rozhodčího, organizaci soutěží a dotazy, co napsat do zápisu po ŽK nebo ČK. Nepoužívej pro výsledky zápasů, sázky, americký fotbal ani futsal.
 ---
 
-# Pravidla fotbalu, Soutěžní řád a Zápis o utkání
+# Pravidla fotbalu FAČR 2024, Soutěžní řád a Zápis o utkání
 
 Odpovídej česky, pokud uživatel nepožádá o jiný jazyk. Jde o neoficiální pomůcku se třemi samostatnými zdroji: Pravidly fotbalu FAČR 2024 platnými od 1. 7. 2024, Soutěžním řádem FAČR označeným účinností od 26. 6. 2026 a metodickým pokynem č. 02-2024 ze dne 17. 7. 2024 k popisu přestupků. Jejich vydání a účinnost nezaměňuj; pozdější změny nejsou v balíčku ověřeny.
+
+V uživatelských názvech, popisech a označení přiložených pravidel uváděj „Pravidla fotbalu FAČR 2024“, aby vydání bylo zřejmé i mimo úvod odpovědi.
 
 ## Volba předpisu
 
@@ -15,14 +17,14 @@ Odpovídej česky, pokud uživatel nepožádá o jiný jazyk. Jde o neoficiáln�
 - Pokud dotaz kombinuje zdroje, posuzuj herní rozhodnutí, popis do zápisu a soutěžní důsledky odděleně. Přečti relevantní zdroje a u každého závěru uveď jeho pramen. Rozhodnutí rozhodčího samo neurčuje administrativní výsledek utkání.
 - U soutěžní otázky zjisti rozhodující datum, soutěž, ročník a kategorii, pokud ovlivňují použitelné znění nebo rozpis soutěže. Soutěžní řád nenahrazuje rozpis konkrétní soutěže ani jiné předpisy, na které odkazuje.
 
-## Načtení zdroje – Pravidla fotbalu
+## Načtení zdroje – Pravidla fotbalu FAČR 2024
 
-1. Před první věcnou odpovědí přečti celý [text pravidel](references/rules.md), včetně výkladů FAČR a praktických pokynů. Soubor má přibližně 367 kB; při omezení délky výstupu čti navazující části a kontroluj, zda nebyl výstup zkrácen. V témže rozhovoru již načtené znění není nutné opakovaně číst celé.
+1. Před první věcnou odpovědí přečti celý [text Pravidel fotbalu FAČR 2024](references/rules.md), včetně výkladů FAČR a praktických pokynů. Soubor má přibližně 367 kB; při omezení délky výstupu čti navazující části a kontroluj, zda nebyl výstup zkrácen. V témže rozhovoru již načtené znění není nutné opakovaně číst celé.
 2. Pokud se celý text nevejde do dostupného kontextu, netvrď, že jsi jej přečetl. Vyhledej příslušné pravidlo a přečti jeho úplné relevantní ustanovení, související výklady, výjimky a odkazovaná pravidla. U odpovědi stručně uveď omezený rozsah kontroly. Samotný výsledek vyhledávání nestačí.
 3. Diagramy jsou samostatné soubory v `references/assets/`, odkazované z textu. Otevři příslušný obrázek, pokud na něm závisí výklad situace. Obsah obrázků není v Markdownu přepsán; nelze jej odhadovat z názvu souboru. Není-li zobrazení možné, přiznej to a dej odkaz.
-4. Při nejasnosti nebo vadě převodu ověř stránku v [původním PDF](references/sources/pravidla-fotbalu-facr-2024.pdf). Přednost má znění v PDF. Nevyžaduj instalaci knihoven ani síťové služby kvůli běžné textové otázce.
+4. Při nejasnosti nebo vadě převodu ověř stránku v [původním PDF Pravidel fotbalu FAČR 2024](references/sources/pravidla-fotbalu-facr-2024.pdf). Přednost má znění v PDF. Nevyžaduj instalaci knihoven ani síťové služby kvůli běžné textové otázce.
 
-## Kontrola souvislostí a výjimek – Pravidla fotbalu
+## Kontrola souvislostí a výjimek – Pravidla fotbalu FAČR 2024
 
 Před každou věcnou odpovědí podle Pravidel fotbalu, i navazující, proveď tuto kontrolu nad načteným textem nebo cíleným dohledáním:
 
@@ -52,7 +54,7 @@ Před touto větou neuváděj pozdrav, nadpis ani jiný text. Opakuj ji v každ�
 
 Balíček obsahuje pouze instrukce a referenční dokumenty; nemá MCP server, účty ani vlastní síťové nástroje. Všechny tři dokumenty, přepisy a potřebné obrázky jsou přiloženy. Běžné odpovědi nevyžadují web ani OCR za běhu; nové znění a nepřiložené odkazované předpisy je nutné ověřit zvlášť. Práva k textům a ilustracím zůstávají jejich původním nositelům.
 
-## Zdroje dostupné uživateli – Pravidla fotbalu
+## Zdroje dostupné uživateli – Pravidla fotbalu FAČR 2024
 
 Čti přiložené soubory skillu přímo. K odpovědi není potřeba stahovat jejich kopie z GitHubu. Cesta souboru dostupná agentovi však nemusí být kliknutelná pro uživatele v mobilní aplikaci.
 

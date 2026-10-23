@@ -1,4 +1,4 @@
-# Pravidla fotbalu a Soutěžní řád v češtině
+# Pravidla fotbalu FAČR 2024 a Soutěžní řád v češtině
 
 Tento skill umožňuje ptát se ChatGPT nebo Claude na pravidla fotbalu, organizaci soutěží a formulaci přestupků do **Zápisu o utkání**. Obsahuje **Pravidla fotbalu FAČR 2024**, **Soutěžní řád FAČR (vydání označené účinností od 26. 6. 2026)** a **metodický pokyn č. 02-2024 k popisu přestupků**; odpovědi uvádějí konkrétní ustanovení a stránku zdroje.
 
@@ -17,7 +17,7 @@ Stáhni **skill ZIP** z [nejnovějšího vydání](https://github.com/KaliCZ/foo
 1. V prohlížeči otevři [ChatGPT — Plugins](https://chatgpt.com/plugins) a přihlas se. Na tuto stránku se dostaneš také přes **Settings → Plugins → Browse plugins**.
 2. Přepni na záložku **Skills**.
 3. Klikni na **+ → Upload from your computer** a vyber stažený skill ZIP.
-4. Ověř, že je **Pravidla fotbalu a Soutěžní řád (CZ)** mezi nainstalovanými skilly, a začni nový chat s tímto skillem.
+4. Ověř, že je **Pravidla fotbalu FAČR 2024 a Soutěžní řád (CZ)** mezi nainstalovanými skilly, a začni nový chat s tímto skillem.
 5. V desktopové nebo Android aplikaci se přihlas ke stejnému účtu a začni nový chat se skillem. Další instalace v aplikaci není potřeba.
 
 ![Settings → Plugins → Browse plugins](docs/images/chatgpt-settings-plugins.png)
@@ -26,7 +26,7 @@ Stáhni **skill ZIP** z [nejnovějšího vydání](https://github.com/KaliCZ/foo
 
 Pro první otázku zkus:
 
-> Použij skill Pravidla fotbalu a Soutěžní řád (CZ). Může být hráč v ofsajdu přímo z vhazování? Uveď pravidlo a stránku.
+> Použij skill Pravidla fotbalu FAČR 2024 a Soutěžní řád (CZ). Může být hráč v ofsajdu přímo z vhazování? Uveď pravidlo a stránku.
 
 Odpověď má začínat upozorněním, že vychází z vydání FAČR 2024.
 
@@ -73,7 +73,7 @@ S Pythonem 3.10 nebo novějším spusť z kořene repozitáře:
 ```sh
 python -m unittest discover -s tests -v
 python scripts/build_skill.py --check
-python scripts/build_skill.py --version 0.3.0
+python scripts/build_skill.py --version 1.2.0
 ```
 
 Sestavení vytvoří ZIP a kontrolní součet do `dist/`; tyto soubory se necommitují. Postup vydání, testovací scénáře a údržbu převodu najdeš v [průvodci pro správce](docs/publishing-and-testing.md).

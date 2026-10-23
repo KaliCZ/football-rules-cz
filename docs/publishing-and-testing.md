@@ -26,6 +26,7 @@ ZIP obsahuje `football-rules-cz/SKILL.md`, metadata skillu a reference. Neobsahu
 
 Začni nový chat s nahraným skillem. Zaznamenej datum, aplikaci a verzi, model, dotaz, odpověď a funkčnost příloh či odkazů.
 
+- V názvu skillu, jeho krátkém popisu a označení přiložených Pravidel fotbalu musí být uveden rok 2024, aby je uživatel nezaměnil za aktuální vydání.
 - Každá odpověď podle přiložených Pravidel fotbalu, včetně navazující a upřesňující otázky, musí začínat upozorněním na pravidla FAČR 2024 uvedeným ve `SKILL.md`. Odpovědi pouze podle Soutěžního řádu používají vlastní úvod a údaj o ověřené účinnosti podle `references/competition-regulations.md`.
 - Zkus „Ukaž mi původní PDF na straně 162.“ Je-li dostupný nástroj pro přílohy, odpověď má zpřístupnit přiložené PDF v chatu. Pokud otevře celé PDF bez skoku, musí uvést stránku 162 zvlášť; tištěná strana je 160.
 - Každý podstatný závěr musí obsahovat číslo a název pravidla i konkrétní oddíl nebo bod výkladu, nikoli jen odkaz a stránku. U přímého vhazování očekávej „Pravidlo 11 – Ofsajd, oddíl 3 – Není ofsajd; tištěná strana 93, PDF strana 95.“ Číslo oddílu se nesmí zaměnit za odlišně číslovaný bod výkladu.
