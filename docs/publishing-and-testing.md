@@ -2,7 +2,7 @@
 
 ## Stav
 
-Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024 a Soutěžní řád označený účinností od 26. 6. 2026, jejich přepisy, PNG obrázky a původní PDF mají jednu kanonickou sadu v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a Pravidla fotbalu nezahrnují změny z let 2025 a 2026. Soutěžní řád má vlastní vydání a účinnost.
+Repozitář obsahuje jeden samostatný skill pro ChatGPT a Claude, bez plugin manifestů a marketplace. Pravidla FAČR 2024, Soutěžní řád označený účinností od 26. 6. 2026 a metodický pokyn č. 02-2024 k popisu přestupků mají zdroje v `skills/football-rules-cz/references/`. Nejde o oficiální produkt FAČR a Pravidla fotbalu nezahrnují změny z let 2025 a 2026. Soutěžní řád a metodický pokyn mají vlastní údaje o vydání; pozdější změny nejsou ověřeny.
 
 Autor projektu potvrdil 20. 9. 2026 následující postupy:
 
@@ -80,11 +80,29 @@ Automatické kontroly souborů nenahrazují ruční ověření odpovědí modelu
 | Navazující otázka pouze k Soutěžnímu řádu | Použít přesný úvod pro Soutěžní řád; nepřipisovat mu účinnost Pravidel fotbalu 2024. |
 | Původní otázka na ofsajd z vhazování | Zachovat původní zdroj, upozornění na vydání 2024 a citaci pravidla 11; nevyžadovat Soutěžní řád pro čistě herní otázku. |
 
+## Scénáře pro Zápis o utkání
+
+Tyto scénáře ověřují práci s fakty a volbu zdroje; nejsou zaznamenanými výsledky testů modelu.
+
+| Dotaz / podmínka | Očekávání |
+| --- | --- |
+| „Hráč dostal druhou ŽK. Co mám napsat do Zápisu o utkání?“ | Vyžádat oba přestupky a chybějící údaje; podle bodu 6 na straně 1 nestačí popsat pouze druhou ŽK. |
+| „Ve 35. minutě jsem napomenul domácího č. 8 za protest v přerušené hře. Řekl mi přesně: Pískej to pořádně. Napiš popis do zápisu.“ | Samostatný návrh s přesným výrokem, adresátem a známými údaji; citace strany 2 a přílohy č. 1, B/1, strana 4 mimo návrh. Bez vymyšleného jména či stavu. |
+| „Vyloučil jsem ho za nadávky. Přesná slova si nepamatuju, něco doplň.“ | Nevymyslet citaci; vysvětlit požadavek na doslovný výrok a vyžádat, co rozhodčí skutečně slyšel. |
+| „Hráč po ČK dál vyhrožoval.“ | Zjistit konkrétní další jednání a oddělit je od důvodu vyloučení; uvést bod 5 na straně 1. |
+| „Po faulu šel soupeř střídat, zranění nevím.“ | Neodvozovat diagnózu ani tvrzení, že střídání bylo vynuceno zraněním; doplnit zjištěné následky podle strany 2. |
+| „Zmařil šanci surovou hrou. Jak to popsat?“ | Zjistit konkrétní zákrok, místo, stav a navázání; podle strany 2 popsat nejprve surovou hru, poté zmaření možnosti. |
+| „Vzor A/9 uvádí ŽK za držení při zmaření zjevné brankové možnosti. Je to správně?“ | Nepoužít vzor jako konečný výklad trestu; načíst pravidlo 12 a celý výklad, rozlišit zdroje a případný rozpor. |
+| „Kolik zápasů dostane za tu červenou?“ | Nepředpovídat disciplinární trest z metodického pokynu; vyžádat nebo ověřit příslušný Disciplinární řád a okolnosti. |
+| Web nedostupný; dotaz pouze na formulaci zápisu | Použít přiložený šestistránkový přepis; úvod pouze pro MP č. 02-2024, bez předstírání ověření současné účinnosti. |
+
 ## Původ zdrojů a údržba převodu
 
 Pravidla fotbalu platná od 1. 7. 2024 zpracovala Pravidlová komise FAČR a vydalo Nakladatelství Olympia (ISBN 978-80-7376-695-5). PDF bylo staženo 20. 9. 2026 z [OFS Jičín](https://ofs-jicin.cz/wp-content/uploads/2024/08/pravidla-fotbalu-facr-2024.pdf); dostupné je také na [webu FAČR](https://www.fotbal.cz/facr/document/download/136707). SHA-256: `deca4c192c10ba0a5b70882eb6fbb26cdf2b011d3b5fc81aa5de95acb3ae7306`. Text byl převeden pomocí pdfplumber 0.11.9; obrázky zachovávají původní grafický obsah.
 
 PDF Soutěžního řádu dodal uživatel 7. 10. 2026; nástroje, kontrolní součty a pokrytí stran zaznamenávají [metadata převodu](../skills/football-rules-cz/references/competition-regulations-provenance.json). [Pokyny k výkladu](../skills/football-rules-cz/references/competition-regulations.md) popisují účinnost, citace a omezení OCR.
+
+Metodický pokyn č. 02-2024 byl stažen z odkazu dodaného uživatelem. [Metadata převodu](../skills/football-rules-cz/references/misconduct-reporting-provenance.json) zaznamenávají URL, datum stažení, SHA-256 a kontrolní součty všech šesti stran. Přepis zachovává úplný výstup `pdfplumber.Page.extract_text()` s výchozími parametry, včetně záhlaví a zápatí; OCR není potřeba. [Pokyny pro návrh zápisu](../skills/football-rules-cz/references/misconduct-reporting.md) oddělují formulaci přestupku od posouzení trestu. Při obnově přepisu porovnej všech šest stran s PDF a spusť automatické kontroly; sestavení ZIPu převod neopakuje.
 
 Převod Soutěžního řádu se při sestavení ZIPu neopakuje. Pro jeho ruční obnovu slouží [extrakční skript](../scripts/extract_competition_regulations.py), který vyžaduje Poppler (`pdftotext`), PyMuPDF a Tesseract s českým modelem z projektu `tesseract-ocr/tessdata_fast`. Parametr `--tessdata-dir` musí ukazovat na složku se souborem `ces.traineddata`; skript před převodem ověří kontrolní součty PDF i modelu podle zaznamenané verze.
 

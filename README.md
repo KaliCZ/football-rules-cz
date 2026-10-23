@@ -1,12 +1,12 @@
 # Pravidla fotbalu a Soutěžní řád v češtině
 
-Tento skill umožňuje ptát se ChatGPT nebo Claude na pravidla fotbalu a organizaci soutěží. Obsahuje **Pravidla fotbalu FAČR 2024** a **Soutěžní řád FAČR (vydání označené účinností od 26. 6. 2026)**; odpovědi uvádějí konkrétní ustanovení a stránku zdroje.
+Tento skill umožňuje ptát se ChatGPT nebo Claude na pravidla fotbalu, organizaci soutěží a formulaci přestupků do **Zápisu o utkání**. Obsahuje **Pravidla fotbalu FAČR 2024**, **Soutěžní řád FAČR (vydání označené účinností od 26. 6. 2026)** a **metodický pokyn č. 02-2024 k popisu přestupků**; odpovědi uvádějí konkrétní ustanovení a stránku zdroje.
 
-Pravidla fotbalu nezahrnují změny z let 2025 a 2026; pozdější změny Soutěžního řádu nejsou ověřené.
+Pravidla fotbalu nezahrnují změny z let 2025 a 2026; pozdější změny Soutěžního řádu ani metodického pokynu nejsou ověřené.
 
 ## Instalace skillu
 
-Pro ChatGPT i Claude se používá stejný ZIP se skillem, oběma dokumenty a obrázky.
+Pro ChatGPT i Claude se používá stejný ZIP se skillem, všemi třemi dokumenty a obrázky.
 
 Stáhni **skill ZIP** z [nejnovějšího vydání](https://github.com/KaliCZ/football-rules-cz/releases/latest): soubor pojmenovaný `football-rules-cz-skill-` s číslem verze a příponou `.zip`. Nevybírej automatické archivy **Source code** a ZIP před nahráním nerozbaluj.
 
@@ -55,9 +55,16 @@ Novou verzi stáhni z GitHub Releases a nahraj ji přes správu skillů. Ruční
 
 - Pravidla fotbalu FAČR 2024: [text](skills/football-rules-cz/references/rules.md) · [PDF](skills/football-rules-cz/references/sources/pravidla-fotbalu-facr-2024.pdf)
 - Soutěžní řád FAČR 2026: [text](skills/football-rules-cz/references/competition-regulations-text.md) · [PDF](skills/football-rules-cz/references/sources/soutezni-rad-facr-2026-06-26.pdf)
+- Pokyny k popisu přestupků, MP č. 02-2024: [text](skills/football-rules-cz/references/misconduct-reporting-text.md) · [PDF](skills/football-rules-cz/references/sources/mp-02-2024-pokyny-k-popisu-prestupku.pdf)
 - [Samostatné obrázky](skills/football-rules-cz/references/assets/)
 
 Jde o neoficiální pomůcku; pro kontrolu znění slouží původní PDF. Autorská práva k textům a ilustracím zůstávají původním nositelům práv.
+
+Pro pomoc se zápisem zkus:
+
+> Pomoz mi formulovat popis vyloučení po druhé ŽK do Zápisu o utkání. Jaké údaje ode mě potřebuješ?
+
+Skill připraví návrh ze sdělených skutečností a vyžádá si chybějící podrobnosti; citace a vysvětlení ponechá mimo text zápisu.
 
 ## Údržba a vydání
 

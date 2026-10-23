@@ -1,17 +1,18 @@
 ---
 name: football-rules-cz
-description: Odpovídá česky na otázky o pravidlech asociačního fotbalu podle českého vydání FAČR 2024; vysvětluje herní situace, rozhodnutí rozhodčího a diagramy s citacemi a odpovídá podle přiloženého Soutěžního řádu FAČR označeného účinností od 26. 6. 2026. Použij pro dotazy k pravidlům fotbalu, ofsajdu, přestupkům, navazování hry a organizaci soutěží podle Soutěžního řádu FAČR. Nepoužívej pro výsledky zápasů, sázky, americký fotbal ani futsal.
+description: Odpovídá česky na otázky o pravidlech fotbalu FAČR 2024 a Soutěžním řádu FAČR 2026 s citacemi. Pomáhá formulovat popis přestupků do Zápisu o utkání (ZoU) a Zprávy delegáta podle metodického pokynu č. 02-2024. Použij pro herní situace, rozhodnutí rozhodčího, organizaci soutěží a dotazy, co napsat do zápisu po ŽK nebo ČK. Nepoužívej pro výsledky zápasů, sázky, americký fotbal ani futsal.
 ---
 
-# Pravidla fotbalu a Soutěžní řád FAČR
+# Pravidla fotbalu, Soutěžní řád a Zápis o utkání
 
-Odpovídej česky, pokud uživatel nepožádá o jiný jazyk. Jde o neoficiální pomůcku se dvěma samostatnými zdroji: Pravidly fotbalu FAČR 2024 platnými od 1. 7. 2024 a Soutěžním řádem FAČR označeným účinností od 26. 6. 2026. Jejich vydání a účinnost nezaměňuj; pozdější změny nejsou v balíčku ověřeny.
+Odpovídej česky, pokud uživatel nepožádá o jiný jazyk. Jde o neoficiální pomůcku se třemi samostatnými zdroji: Pravidly fotbalu FAČR 2024 platnými od 1. 7. 2024, Soutěžním řádem FAČR označeným účinností od 26. 6. 2026 a metodickým pokynem č. 02-2024 ze dne 17. 7. 2024 k popisu přestupků. Jejich vydání a účinnost nezaměňuj; pozdější změny nejsou v balíčku ověřeny.
 
 ## Volba předpisu
 
 - Pro herní situace a rozhodnutí rozhodčího použij přiložená Pravidla fotbalu FAČR 2024 podle pokynů níže.
+- Pro formulaci přestupku do Zápisu o utkání (ZoU), zprávy rozhodčího nebo Zprávy delegáta načti [pokyny k popisu přestupků](references/misconduct-reporting.md). Obsahují postup pro návrh textu, doplnění chybějících skutečností a citování metodického pokynu č. 02-2024. Pokud uživatel současně potřebuje posoudit přestupek či trest, ověř také Pravidla fotbalu; vzory zápisů je nenahrazují.
 - Pro organizaci soutěží, účast družstev a hráčů, soupisky, termíny a administrativní postupy nejprve načti [pokyny k Soutěžnímu řádu](references/competition-regulations.md) a čti přiložený úplný přepis včetně relevantních příloh; původní PDF má při nejasnosti přednost. Tyto příklady jsou vodítkem pro výběr zdroje; konkrétní závěr musí vycházet z načteného ustanovení.
-- Pokud dotaz zahrnuje oba předpisy, posuzuj herní rozhodnutí a soutěžní důsledky odděleně, přečti oba relevantní zdroje a u každého závěru uveď jeho předpis. Rozhodnutí rozhodčího samo neurčuje administrativní výsledek utkání.
+- Pokud dotaz kombinuje zdroje, posuzuj herní rozhodnutí, popis do zápisu a soutěžní důsledky odděleně. Přečti relevantní zdroje a u každého závěru uveď jeho pramen. Rozhodnutí rozhodčího samo neurčuje administrativní výsledek utkání.
 - U soutěžní otázky zjisti rozhodující datum, soutěž, ročník a kategorii, pokud ovlivňují použitelné znění nebo rozpis soutěže. Soutěžní řád nenahrazuje rozpis konkrétní soutěže ani jiné předpisy, na které odkazuje.
 
 ## Načtení zdroje – Pravidla fotbalu
@@ -33,11 +34,11 @@ Před každou věcnou odpovědí podle Pravidel fotbalu, i navazující, proveď
 
 ## Odpověď
 
-Každou odpověď opřenou o přiložená Pravidla fotbalu 2024, včetně odpovědi kombinující oba předpisy, začni přesně touto větou:
+Každou odpověď opřenou o přiložená Pravidla fotbalu 2024, včetně odpovědi kombinující více zdrojů, začni přesně touto větou:
 
 > Tato odpověď vychází z pravidel fotbalu FAČR z roku 2024, platných od 1. 7. 2024; pozdější změny nejsou v přiloženém vydání zahrnuty.
 
-U odpovědi pouze k Soutěžnímu řádu použij místo této věty úvod a pokyny z `references/competition-regulations.md`; neoznačuj Soutěžní řád jako vydání Pravidel fotbalu 2024.
+U odpovědi bez Pravidel fotbalu použij úvod pro skutečně použitý zdroj z `references/competition-regulations.md` nebo `references/misconduct-reporting.md`. Při kombinaci uveď úvody použitých zdrojů v pořadí Pravidla fotbalu, Soutěžní řád, metodický pokyn; nepřidávej upozornění pro nepoužitý zdroj. Citace a upozornění nepatří do textu určeného ke vložení do Zápisu o utkání.
 
 Před touto větou neuváděj pozdrav, nadpis ani jiný text. Opakuj ji v každé odpovědi podle Pravidel fotbalu, včetně navazujících odpovědí, upřesňujících otázek a sdělení, že zdroj neposkytuje odpověď. Pokud uživatel požádá o jiný jazyk, začni věrným překladem této věty. Případné samostatně ověřené novější znění potom jasně odděl od přiloženého vydání 2024.
 
@@ -49,7 +50,7 @@ Před touto větou neuváděj pozdrav, nadpis ani jiný text. Opakuj ji v každ�
 - V přiložených Pravidlech fotbalu nejsou změny z let 2025 a 2026. Na dotaz po současném znění to výslovně řekni; nevydávej pravidlo z roku 2024 za dnešní. Je-li dostupné prohlížení webu a uživatel chce aktuální stav, ověř jej v oficiálním zdroji a cituj jej odděleně. Jinak vyžádej příslušné novější znění.
 - Pokud zdroj otázku neřeší, řekni to. Nevymýšlej pravidla futsalu, mládežnické výjimky ani soutěžní předpisy, které v balíčku nejsou.
 
-Balíček obsahuje pouze instrukce a referenční dokumenty; nemá MCP server, účty ani vlastní síťové nástroje. Oba dokumenty, přepisy a potřebné obrázky jsou přiloženy. Běžné odpovědi nevyžadují web ani OCR za běhu; nové znění a nepřiložené odkazované předpisy je nutné ověřit zvlášť. Práva k pravidlům a ilustracím zůstávají jejich původním nositelům.
+Balíček obsahuje pouze instrukce a referenční dokumenty; nemá MCP server, účty ani vlastní síťové nástroje. Všechny tři dokumenty, přepisy a potřebné obrázky jsou přiloženy. Běžné odpovědi nevyžadují web ani OCR za běhu; nové znění a nepřiložené odkazované předpisy je nutné ověřit zvlášť. Práva k textům a ilustracím zůstávají jejich původním nositelům.
 
 ## Zdroje dostupné uživateli – Pravidla fotbalu
 

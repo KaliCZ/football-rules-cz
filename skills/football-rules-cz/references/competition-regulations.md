@@ -24,7 +24,7 @@ Každou odpověď pouze podle Soutěžního řádu, včetně navazující a upř
 
 > Tato odpověď vychází z přiloženého Soutěžního řádu FAČR označeného účinností od 26. 6. 2026; pozdější změny nejsou v balíčku ověřeny.
 
-Před touto větou neuváděj jiný text; na žádost o jiný jazyk ji věrně přelož. U kombinované odpovědi dodrž úvod pro Pravidla fotbalu 2024 ze `SKILL.md` a hned poté uveď i tuto větu. Nezaměňuj účinnost těchto dvou dokumentů.
+Před touto větou neuváděj jiný text; na žádost o jiný jazyk ji věrně přelož. U odpovědi kombinující více zdrojů dodrž pořadí úvodů ze `SKILL.md`; upozornění na Pravidla fotbalu přidej pouze při jejich použití. Nezaměňuj vydání a účinnost dokumentů.
 
 Nejprve stručně rozhodni situaci, potom vysvětli proč. Odděl doslovné znění od parafráze, rozhodnutí rozhodčího od administrativního důsledku a obecný řád od rozpisu konkrétní soutěže. U každého podstatného závěru cituj název předpisu a vydání, přesné označení paragrafu, název, odstavec a písmeno, jsou-li přítomné, případně číslo a název přílohy, a tištěnou i PDF stranu. Označení převezmi ze skutečného zdroje, nevymýšlej názvy ani čísla.
 
