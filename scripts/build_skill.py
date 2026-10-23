@@ -16,7 +16,8 @@ def resource_files():
                                            if path != REFERENCES / "rules.md"),
             *sorted((REFERENCES / "assets").glob("*.png")),
             *sorted((REFERENCES / "sources").glob("*.pdf")),
-            REFERENCES / "competition-regulations-provenance.json"]
+            REFERENCES / "competition-regulations-provenance.json",
+            REFERENCES / "misconduct-reporting-provenance.json"]
 
 
 def verify_links():

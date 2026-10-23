@@ -113,5 +113,32 @@ class SkillResourcesTests(unittest.TestCase):
                 BUILD.verify_document_links(doc)
 
 
+class MisconductReportingResourcesTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.metadata = json.loads((REF / 'misconduct-reporting-provenance.json').read_text(encoding='utf-8'))
+        cls.text = (REF / 'misconduct-reporting-text.md').read_text(encoding='utf-8')
+        cls.pages = dict(re.findall(r'<a id="pdf-(\d{3})"></a>\n(.*?)(?=<a id="pdf-|\Z)', cls.text, re.S))
+
+    def test_source_identity_and_all_six_pages(self):
+        source = REF / self.metadata['pdf']
+        checksum = hashlib.sha256(source.read_bytes()).hexdigest()
+        self.assertEqual(checksum, '2e35b1bc52ca4d4aa0aaaafc68be72198235969a1c5c75692ad853d5ef77a923')
+        self.assertEqual(checksum, self.metadata['sha256'])
+        self.assertEqual(self.metadata['page_count'], 6)
+        self.assertEqual(set(self.pages), {f'{number:03}' for number in range(1, 7)})
+        self.assertEqual([page['page'] for page in self.metadata['pages']], list(range(1, 7)))
+        for page in self.metadata['pages']:
+            number = page['page']
+            with self.subTest(page=number):
+                self.assertEqual(page['printed_page'], number)
+                section = self.pages[f'{number:03}']
+                self.assertIn(f'PDF strana {number} / tištěná strana {number}', section)
+                self.assertIn(f'{self.metadata["pdf"]}#page={number}', section)
+                native = section.split('```text\n', 1)[1].split('\n```', 1)[0]
+                self.assertEqual(len(native), page['native_text_characters'])
+                self.assertEqual(normalized_hash(native), page['native_text_sha256_without_whitespace'])
+
+
 if __name__ == '__main__':
     unittest.main()

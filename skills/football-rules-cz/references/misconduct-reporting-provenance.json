@@ -1,0 +1,50 @@
+{
+  "source_url": "https://863440652d.cbaul-cdnwnd.com/47e587b48ab1b3c776dc8ba6a82e57a9/200001859-144cc144ce/mp-02-2024-pokyny-k-popisu-prestupku.pdf",
+  "retrieved_on": "2026-10-23",
+  "source_note": "Downloaded from the user-supplied URL; current applicability and later revisions were not verified.",
+  "title": "Metodický pokyn č. 02-2024 – Pokyny k popisu přestupků",
+  "author": "Pravidlová komise FAČR",
+  "document_date": "2024-07-17",
+  "pdf": "sources/mp-02-2024-pokyny-k-popisu-prestupku.pdf",
+  "sha256": "2e35b1bc52ca4d4aa0aaaafc68be72198235969a1c5c75692ad853d5ef77a923",
+  "page_count": 6,
+  "extraction": "pdfplumber 0.11.9; Page.extract_text() with default options; complete native text including headers and footers; no OCR",
+  "pages": [
+    {
+      "page": 1,
+      "printed_page": 1,
+      "native_text_characters": 2916,
+      "native_text_sha256_without_whitespace": "667dbe7a01f5b346565e2d711ec927fced0a78faf96114c10b649826b260ca02"
+    },
+    {
+      "page": 2,
+      "printed_page": 2,
+      "native_text_characters": 2011,
+      "native_text_sha256_without_whitespace": "706335bd0d091a5244d2e8db7f3b79678a83c6c087f93d61ad85fbf76a92726a"
+    },
+    {
+      "page": 3,
+      "printed_page": 3,
+      "native_text_characters": 2705,
+      "native_text_sha256_without_whitespace": "63e2b41393caba375f95232977b97b1c25552848e834aa47452578990f123770"
+    },
+    {
+      "page": 4,
+      "printed_page": 4,
+      "native_text_characters": 2312,
+      "native_text_sha256_without_whitespace": "15ffaccc48039707f7bf15d73a75fef6f543d1b546962c196f696c799388cc21"
+    },
+    {
+      "page": 5,
+      "printed_page": 5,
+      "native_text_characters": 2345,
+      "native_text_sha256_without_whitespace": "506f219a4b5135e628a5b62d00e3cca3424f7151ea1ce4e496b4eacd3afccb3f"
+    },
+    {
+      "page": 6,
+      "printed_page": 6,
+      "native_text_characters": 3021,
+      "native_text_sha256_without_whitespace": "7902a096c478330706c38516eb316ddfb7793d5c6983ffc98a9e4b4bd796f308"
+    }
+  ]
+}
